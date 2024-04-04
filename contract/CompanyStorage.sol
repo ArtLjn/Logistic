@@ -10,7 +10,7 @@ contract CompanyStorage is TableTools {
 
     // 创建采购公司
     // _fields: companyAddress, companyName
-    // exam: 0x01857744463200e483c82cd5789a79b8313f47e8,ddd
+    // exam: 0x82b0f287dbb0f6622d9b8a350493a47595a8a54b,ddd
     function createPerChaseCompany(string _fields) public {
         string[] memory filedList = getFieldsArray(_fields);
         require(filedList.length == 2,LIST_LENGTH_ERROR);
@@ -51,7 +51,7 @@ contract CompanyStorage is TableTools {
 
     //创建运输公司
     // _fields:  companyAddress,companyName,location,bussinessScope
-    // exam: 0x1b3cbc6c55e3c6544dca63e1c2f9eff79e5d9844,kkk,local,1
+    // exam: 0x149b37fd5f05fe348166d44fe64daac6a4b936b1,kkk,local,1
     function createTransCompany(string _fields) public {
         string[] memory filedList = getFieldsArray(_fields);
         require(filedList.length == 4,LIST_LENGTH_ERROR);

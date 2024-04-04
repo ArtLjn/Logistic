@@ -5,7 +5,7 @@ import "./SafeMath.sol";
 import "./LibStringUtil.sol";
 import "./TypeConvertUtil.sol";
 import "./LibString.sol";
-import "../LibString.sol";
+import "./LibString.sol";
 
 contract TableTools {
 
