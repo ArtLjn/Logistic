@@ -3,6 +3,7 @@ package org.example.back.demos.service;
 import org.example.back.demos.model.bo.CreatePerChaseOrderBo;
 import org.example.back.demos.model.bo.LogisticsControllerCreatePerChaseOrderInputBO;
 import org.fisco.bcos.sdk.client.Client;
+import org.fisco.bcos.sdk.transaction.model.dto.TransactionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,6 @@ import java.util.Objects;
 @Service
 public class PerChaseService {
     private final LogisticsControllerService logisticsControllerService;
-
     @Autowired
     public PerChaseService(LogisticsControllerService logisticsControllerService) {
         this.logisticsControllerService = logisticsControllerService;
@@ -26,6 +26,7 @@ public class PerChaseService {
     public boolean CreatePerChase(CreatePerChaseOrderBo createPerChaseOrderBo) throws Exception {
         LogisticsControllerCreatePerChaseOrderInputBO logisticsControllerCreatePerChaseOrderInputBO = new LogisticsControllerCreatePerChaseOrderInputBO();
         logisticsControllerCreatePerChaseOrderInputBO.setFields(createPerChaseOrderBo.toString());
-        return Objects.equals(logisticsControllerService.CreatePerChaseOrder(logisticsControllerCreatePerChaseOrderInputBO).getReturnMessage(), "Success");
+        TransactionResponse transactionResponse =logisticsControllerService.CreatePerChaseOrder(logisticsControllerCreatePerChaseOrderInputBO);
+        return Objects.equals(transactionResponse.getReturnMessage(), "Success");
     }
 }

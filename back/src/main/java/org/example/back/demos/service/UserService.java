@@ -33,7 +33,7 @@ public class UserService {
         queryWrapper.eq("username", loginBean.getUsername())
                     .eq("password", loginBean.getPassword());
         UserEntity userEntity = userMapper.selectOne(queryWrapper);
-        return userEntity == null;
+        return userEntity != null;
     }
     
     public int CreateUser(UserEntity userEntity) {

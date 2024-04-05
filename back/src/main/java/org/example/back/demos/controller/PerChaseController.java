@@ -6,14 +6,11 @@ import org.example.back.demos.service.PerChaseService;
 import org.example.back.demos.util.AjaxResult;
 import org.example.back.demos.util.ReflectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author ljn
- * @Description: 物流相关接口
+ * @Description: 采购相关接口
  * @date 2024/4/2/17:16
  */
 
@@ -29,7 +26,7 @@ public class PerChaseController {
 
     @BuildClientOptsForPrivateKey
     @PostMapping("/createPerChaseOrder")
-    public AjaxResult<String> createPerChaseOrder(CreatePerChaseOrderBo createPerChaseOrderBo){
+    public AjaxResult<String> createPerChaseOrder(@RequestBody CreatePerChaseOrderBo createPerChaseOrderBo){
         try {
             ReflectionUtils.checkNonNullFields(createPerChaseOrderBo,CreatePerChaseOrderBo.class);
             if (!perChaseService.CreatePerChase(createPerChaseOrderBo)) {

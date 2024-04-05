@@ -63,7 +63,7 @@ public class UserController {
             userEntity.setCompanyAddress(cryptoSuite.getCryptoKeyPair().getAddress());
             userEntity.setPrivateKey(cryptoSuite.getCryptoKeyPair().getHexPrivateKey());
             String _fields;
-            String returnMessage = null;
+            String returnMessage;
             switch (registerBo.getRole()) {
                 case Role.permission.TRANS:
                     _fields = String.format("%s,%s,%s,%s",userEntity.getCompanyAddress(),userEntity.getCompanyName(),
@@ -71,19 +71,22 @@ public class UserController {
                     LogisticsControllerCreateTransCompanyInputBO logisticsControllerCreateTransCompanyInputBO = new LogisticsControllerCreateTransCompanyInputBO();
                     logisticsControllerCreateTransCompanyInputBO.set_fields(_fields);
                     returnMessage = logisticsControllerService.CreateTransCompany(logisticsControllerCreateTransCompanyInputBO).getReturnMessage();
+                    break;
                 case Role.permission.PER_CHASE:
+                default:
                     _fields = String.format("%s,%s",userEntity.getCompanyAddress(),userEntity.getCompanyName());
                     LogisticsControllerCreatePerChaseCompanyInputBO logisticsControllerCreatePerChaseCompanyInputBO = new LogisticsControllerCreatePerChaseCompanyInputBO();
                     logisticsControllerCreatePerChaseCompanyInputBO.set_fields(_fields);
                     returnMessage = logisticsControllerService.CreatePerChaseCompany(logisticsControllerCreatePerChaseCompanyInputBO).getReturnMessage();
+                    break;
             }
 
             if(!Objects.equals(returnMessage,"Success")){
                 return new AjaxResult<>(400,"注册失败");
             }
             int result = userService.CreateUser(userEntity);
-            if(result <= 0){
-                return new AjaxResult<>(400,"注册失败");
+            if(result == 0){
+                return new AjaxResult<>(400,"用户名已经存在");
             }
         } catch (Exception e) {
             return new AjaxResult<>(400,e.getMessage());

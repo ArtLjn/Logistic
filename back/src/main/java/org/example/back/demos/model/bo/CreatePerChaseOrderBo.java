@@ -1,5 +1,6 @@
 package org.example.back.demos.model.bo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -10,8 +11,11 @@ import lombok.Data;
 
 @Data
 public class CreatePerChaseOrderBo {
+    @JsonProperty("materials")
     private String materials;
+    @JsonProperty("perChaseTime")
     private String perChaseTime;
+    @JsonProperty("perChasementCycle")
     private String perChasementCycle;
 
     public String toString() {

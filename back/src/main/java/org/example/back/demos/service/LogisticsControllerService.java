@@ -33,7 +33,7 @@ public class LogisticsControllerService {
   @Autowired
   private Client client;
 
-  AssembleTransactionProcessor txProcessor;
+  public AssembleTransactionProcessor txProcessor;
 
   @PostConstruct
   public void init() throws Exception {
