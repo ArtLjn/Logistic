@@ -6,14 +6,13 @@ import org.fisco.bcos.sdk.client.Client;
 import org.fisco.bcos.sdk.config.ConfigOption;
 import org.fisco.bcos.sdk.config.exceptions.ConfigException;
 import org.fisco.bcos.sdk.config.model.ConfigProperty;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
 @Slf4j
-//@Configuration
+@Configuration
 public class SdkConfig {
     private final BcosConfig bcosConfig;
     private final SystemConfig systemConfig;
@@ -35,6 +34,7 @@ public class SdkConfig {
         configCryptoKeyPair(client);
         return client;
     }
+
 
     public void configCryptoKeyPair(Client client){
         if(systemConfig.getHexPrivateKey() == null || systemConfig.getHexPrivateKey().isEmpty()){

@@ -1,4 +1,4 @@
-package org.example.back.demos.entity;
+package org.example.back.demos.model.entity;
 
 /**
  * @author ljn

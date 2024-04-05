@@ -1,4 +1,4 @@
-package org.example.back.demos.bean;
+package org.example.back.demos.model.bo;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import lombok.Data;
  */
 
 @Data
-public class LoginBean {
+public class LoginBo {
     private String username;
     private String password;
 }

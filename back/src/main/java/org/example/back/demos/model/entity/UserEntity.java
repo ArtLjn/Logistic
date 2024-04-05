@@ -1,5 +1,7 @@
-package org.example.back.demos.entity;
+package org.example.back.demos.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -17,6 +19,7 @@ import lombok.NoArgsConstructor;
 @TableName("user")
 public class UserEntity {
     @JsonProperty("id")
+    @TableId(type = IdType.AUTO)
     private int id;
 
     @JsonProperty("username")
@@ -40,4 +43,6 @@ public class UserEntity {
     @JsonProperty("business_scope")
     private String businessScope;
 
+    @JsonProperty("private_key")
+    private String privateKey;
 }

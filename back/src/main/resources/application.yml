@@ -1,5 +1,7 @@
 server:
   port: 8080
+  session:
+    timeout: 60
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/logistics?serverTimezone=GMT%2B8
@@ -9,3 +11,20 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+banner:
+  charset: UTF-8
+system:
+  hexPrivateKey: "1753f860fb224bc54ba38b6544d9d97d75062ec25083863368fab8a916714d85"
+  groupId: 1
+  contract:
+    logisticsControllerAddress: "0x6187c9181eee2b1d3b69fd701c0db6dc7daca7a3"
+cryptoMaterial:
+  certPath: conf
+network:
+  peers:
+    - 127.0.0.1:20200
+    - 127.0.0.1:20201
+

@@ -10,5 +10,5 @@ import org.springframework.context.annotation.Configuration;
         prefix = "contract"
 )
 public class ContractConfig {
-    public String LogisticAddress;
+    public String logisticsControllerAddress;
 }

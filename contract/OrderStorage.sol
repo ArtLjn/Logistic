@@ -29,7 +29,7 @@ contract OrderStorage is TableTools {
 
     // 创建采购订单
     // 要求：只能由采购公司来创建
-    // fields:  materials, perchaseTime,  perchasementCycle
+    // fields:  materials, perchaseTime,perchasementCycle
     // exam: apple,189218291289,20
     function createPerChaseOrder(string fields) public {
         string memory addrStr = TypeConvertUtil.addressToString(tx.origin);

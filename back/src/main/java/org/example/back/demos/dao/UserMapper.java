@@ -1,7 +1,7 @@
 package org.example.back.demos.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.example.back.demos.entity.UserEntity;
+import org.example.back.demos.model.entity.UserEntity;
 
 /**
  * @author ljn
