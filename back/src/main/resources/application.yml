@@ -20,7 +20,7 @@ system:
   hexPrivateKey: "1753f860fb224bc54ba38b6544d9d97d75062ec25083863368fab8a916714d85"
   groupId: 1
   contract:
-    logisticsControllerAddress: "0x6187c9181eee2b1d3b69fd701c0db6dc7daca7a3"
+    logisticsControllerAddress: "0x92d8f3a282c1045295fe121a8f6d96e621501523"
 cryptoMaterial:
   certPath: conf
 network:

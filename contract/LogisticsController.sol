@@ -34,7 +34,7 @@ contract LogisticsController {
     // 创建采购订单
     // 要求：只能由采购公司来创建
     // fields:  materials, perchaseTime,  perchasementCycle
-    function CreatePerChaseOrder(string fields) public {
+    function CreatePerChaseOrder(string fields) public returns(string) {
         return orderStorage.createPerChaseOrder(fields);
     }
 
@@ -45,7 +45,7 @@ contract LogisticsController {
 
     // 创建运输订单
     // 注意：只有运输公司可以创建运输订单
-    function CreateTransOrder(string fields) public {
+    function CreateTransOrder(string fields) public returns(string) {
         return orderStorage.createTransOrder(fields);
     }
 

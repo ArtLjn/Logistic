@@ -3,6 +3,7 @@ package org.example.back.demos.controller.apo;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -41,6 +42,7 @@ public class BuildClientOptsForPrivateKeyImpl {
 
     @Autowired
     public Client client;
+    public static final ThreadLocal<String> currentUsername = new ThreadLocal<>();
 
     @Pointcut("@annotation(org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey)")
     public void tokenRequiredPointcut() {
@@ -62,8 +64,15 @@ public class BuildClientOptsForPrivateKeyImpl {
         if (Objects.isNull(userEntity)) {
             return new AjaxResult<>(401,"Authorization verify failed");
         }
+        // 存储用户名到ThreadLocal
+        currentUsername.set(username);
         this.client.getCryptoSuite().setCryptoKeyPair(client.getCryptoSuite().createKeyPair(userEntity.getPrivateKey()));
         logisticsControllerService.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
         return null;
+    }
+    @After("tokenRequiredPointcut()")
+    public void afterTokenRequired(JoinPoint joinPoint) {
+        // 清除存储在ThreadLocal中的用户名
+        currentUsername.remove();
     }
 }

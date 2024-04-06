@@ -31,7 +31,7 @@ contract OrderStorage is TableTools {
     // 要求：只能由采购公司来创建
     // fields:  materials, perchaseTime,perchasementCycle
     // exam: apple,189218291289,20
-    function createPerChaseOrder(string fields) public {
+    function createPerChaseOrder(string fields) public returns(string){
         string memory addrStr = TypeConvertUtil.addressToString(tx.origin);
         // 判断提交采购订单的用户是不是存在并且是已经注册的采购公司成员
         require(companyStorage.hasExistPerChaseCompany(addrStr),"采购公司不存在");
@@ -44,6 +44,7 @@ contract OrderStorage is TableTools {
         emit INSERT_EVENT(code,new_fields);
         // 将当前索引值push到map表中
         mapStorage.put(PerChaseOrder,index);
+        return index;
     }
 
     // 查询采购订单信息
@@ -79,7 +80,7 @@ contract OrderStorage is TableTools {
     // 注意：只有运输公司可以创建运输订单
     // fields:  perchaseIndex,perchaseCompany,transCompany,clearanceLocation,entryLocation,clearanceTime,entryTime,situation
     // exam: 1,0x82b0f287dbb0f6622d9b8a350493a47595a8a54b,0x149b37fd5f05fe348166d44fe64daac6a4b936b1,NewYork,ShangHai,171221212,178982178,0
-    function createTransOrder(string fields) public {
+    function createTransOrder(string fields) public returns(string) {
         string memory addrStr = TypeConvertUtil.addressToString(tx.origin);
         // 判断提交运输订单的用户是不是存在并且是已经注册的运输公司成员
         require(companyStorage.hasExistTransCompany(addrStr),"运输公司不存在");
@@ -110,6 +111,7 @@ contract OrderStorage is TableTools {
         //绑定采购订单与运输公司的信息
         string memory tranOrderList = concatTrans(perChaseOrder[5],index);
         updatePerChaseOrder(fieldList[0],perChaseOrder,[transCompanyList,tranOrderList]);
+        return index;
     }
 
     function concatTrans(string memory transList,string memory index) private returns(string) {
