@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Token拦截器配置类
  */
-@Configuration
+//@Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
     @Resource
     private TokenInterceptor tokenInterceptor;
@@ -20,11 +20,11 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         List<String> excludePath = new ArrayList<>();
-        excludePath.add("/user/login");    // 登录请求不拦截
-        excludePath.add("/user/register"); // 注册请求不拦截
+        excludePath.add("/api/user/login");    // 登录请求不拦截
+        excludePath.add("/api/user/register"); // 注册请求不拦截
         registry.addInterceptor(tokenInterceptor)
-                .addPathPatterns("/user/**")
-                .addPathPatterns("/seal/**")
+                .addPathPatterns("/api/perChase/**")
+                .addPathPatterns("/api/trans/**")
                 .excludePathPatterns(excludePath);
         //除了登陆接口其他所有接口都需要token验证
         WebMvcConfigurer.super.addInterceptors(registry);

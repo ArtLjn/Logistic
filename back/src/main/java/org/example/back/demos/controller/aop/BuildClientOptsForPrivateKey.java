@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.apo;
+package org.example.back.demos.controller.aop;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

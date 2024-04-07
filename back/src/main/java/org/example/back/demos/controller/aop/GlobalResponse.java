@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.apo;
+package org.example.back.demos.controller.aop;
 
 /**
  * @author ljn

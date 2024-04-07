@@ -1,6 +1,6 @@
 package org.example.back.demos.controller;
 
-import org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey;
+import org.example.back.demos.controller.aop.BuildClientOptsForPrivateKey;
 import org.example.back.demos.model.bo.CreateTransOrderBo;
 import org.example.back.demos.service.OrderService;
 import org.example.back.demos.service.TransService;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
 
-import static org.example.back.demos.controller.apo.BuildClientOptsForPrivateKeyImpl.currentUsername;
+import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUsername;
 
 /**
  * @author ljn

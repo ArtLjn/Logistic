@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.apo;
+package org.example.back.demos.controller.aop;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

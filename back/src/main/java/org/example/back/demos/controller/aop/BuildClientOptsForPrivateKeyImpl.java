@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.apo;
+package org.example.back.demos.controller.aop;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -44,7 +44,7 @@ public class BuildClientOptsForPrivateKeyImpl {
     public Client client;
     public static final ThreadLocal<String> currentUsername = new ThreadLocal<>();
 
-    @Pointcut("@annotation(org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey)")
+    @Pointcut("@annotation(org.example.back.demos.controller.aop.BuildClientOptsForPrivateKey)")
     public void tokenRequiredPointcut() {
     }
 
