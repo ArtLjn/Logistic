@@ -1,8 +1,12 @@
 package org.example.back.demos.service;
 
 import cn.hutool.crypto.SecureUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.example.back.demos.model.Role;
 import org.example.back.demos.model.bo.LoginBo;
+import org.example.back.demos.model.bo.LogisticsControllerGetPerChaseCompanyInputBO;
+import org.example.back.demos.model.bo.LogisticsControllerGetTransCompanyInputBO;
 import org.example.back.demos.model.bo.RegisterBo;
 import org.example.back.demos.dao.UserMapper;
 import org.example.back.demos.model.entity.UserEntity;
@@ -11,6 +15,8 @@ import org.fisco.bcos.sdk.model.CryptoType;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 /**
  * @author ljn
@@ -21,10 +27,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     private final UserMapper userMapper;
+    private final LogisticsControllerService logisticsControllerService;
 
     @Autowired
-    public UserService(UserMapper userMapper) {
+    public UserService(UserMapper userMapper, LogisticsControllerService logisticsControllerService) {
         this.userMapper = userMapper;
+        this.logisticsControllerService = logisticsControllerService;
     }
 
     public boolean Login(LoginBo loginBean) {
@@ -52,5 +60,26 @@ public class UserService {
 
     public boolean hasUser(String username) {
         return GetUser(username) != null;
+    }
+
+    public Object getCompanyMsg(String username) throws Exception {
+        UserEntity userEntity = this.GetUser(username);
+        if (Objects.isNull(userEntity)) {
+            return null;
+        }
+        Object object = new Object();
+        switch (userEntity.getRole()) {
+            case Role.permission.PER_CHASE:
+                LogisticsControllerGetPerChaseCompanyInputBO logisticsControllerGetPerChaseCompanyInputBO = new LogisticsControllerGetPerChaseCompanyInputBO();
+                logisticsControllerGetPerChaseCompanyInputBO.setCompany_addr(userEntity.getCompanyAddress());
+                object = JSON.parseArray(logisticsControllerService.GetPerChaseCompany(logisticsControllerGetPerChaseCompanyInputBO).getReturnObject().get(0).toString()).get(0);
+                break;
+            case Role.permission.TRANS:
+                LogisticsControllerGetTransCompanyInputBO logisticsControllerGetTransCompanyInputBO = new LogisticsControllerGetTransCompanyInputBO();
+                logisticsControllerGetTransCompanyInputBO.setCompany_addr(userEntity.getCompanyAddress());
+                object = JSON.parseArray(logisticsControllerService.GetTransCompany(logisticsControllerGetTransCompanyInputBO).getReturnObject().get(0).toString()).get(0);
+                break;
+        }
+        return object;
     }
 }

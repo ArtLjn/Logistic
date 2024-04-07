@@ -2,6 +2,7 @@ package org.example.back.demos.controller;
 
 import org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey;
 import org.example.back.demos.model.bo.CreatePerChaseOrderBo;
+import org.example.back.demos.service.OrderService;
 import org.example.back.demos.service.PerChaseService;
 import org.example.back.demos.util.AjaxResult;
 import org.example.back.demos.util.ReflectionUtils;
@@ -24,10 +25,11 @@ import static org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey
 @RequestMapping("/api/perChase")
 public class PerChaseController {
     private final PerChaseService perChaseService;
-
+    private final OrderService orderService;
     @Autowired
-    public PerChaseController(PerChaseService perChaseService) {
+    public PerChaseController(PerChaseService perChaseService, OrderService orderService) {
         this.perChaseService = perChaseService;
+        this.orderService = orderService;
     }
 
     @BuildClientOptsForPrivateKey
@@ -38,7 +40,7 @@ public class PerChaseController {
             TransactionResponse transactionResponse = perChaseService.CreatePerChase(createPerChaseOrderBo);
             if (!Objects.equals(transactionResponse.getReceiptMessages(),"Success")) {
                 return new AjaxResult<>(400,transactionResponse.getReturnMessage());
-            } else if (!perChaseService.setSaveData(currentUsername.get(), transactionResponse.getReturnObject().get(0).toString())) {
+            } else if (!orderService.setSaveData(currentUsername.get(), transactionResponse.getReturnObject().get(0).toString())) {
                 return new AjaxResult<>(400,"持久化失败");
             }
         } catch (Exception e) {
@@ -74,8 +76,4 @@ public class PerChaseController {
         return ajaxResult;
     }
 
-    @GetMapping("/queryPerChaseCompany")
-    public String queryPerChaseCompany(){
-        return "success";
-    }
 }

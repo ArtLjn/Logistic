@@ -1,5 +1,6 @@
 package org.example.back.demos.controller;
 
+import org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey;
 import org.example.back.demos.model.Role;
 import org.example.back.demos.model.bo.LoginBo;
 import org.example.back.demos.model.bo.LogisticsControllerCreatePerChaseCompanyInputBO;
@@ -18,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Objects;
+
+import static org.example.back.demos.controller.apo.BuildClientOptsForPrivateKeyImpl.currentUsername;
 
 /**
  * @author ljn
@@ -94,4 +97,17 @@ public class UserController {
         return new AjaxResult<>(200,"注册成功");
     }
 
+    @BuildClientOptsForPrivateKey
+    @GetMapping("/queryCompanyMsg")
+    public AjaxResult<Object> queryPerChaseCompany(){
+        Object list;
+        try {
+            list = userService.getCompanyMsg(currentUsername.get());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        AjaxResult<Object> ajaxResult = new AjaxResult<>(200,"success");
+        ajaxResult.setData(list);
+        return ajaxResult;
+    }
 }

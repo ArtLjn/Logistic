@@ -54,15 +54,15 @@ public class BuildClientOptsForPrivateKeyImpl {
         String token = request.getHeader("Authorization");
         // 非空判断：@RequestHeader("Authorization") String header
         if (StringUtils.isEmpty(token)) {
-            return new AjaxResult<>(401,"Authorization header is missing or empty");
+             throw new RuntimeException("Authorization header is missing or empty");
         }
         String username = TokenUtil.getLoginName(token);
         if (StringUtils.isEmpty(username)) {
-            return new AjaxResult<>(401,"Authorization verify failed");
+            throw new RuntimeException("Authorization verify failed");
         }
         UserEntity userEntity = userService.GetUser(username);
         if (Objects.isNull(userEntity)) {
-            return new AjaxResult<>(401,"Authorization verify failed");
+           throw new RuntimeException("Authorization verify failed");
         }
         // 存储用户名到ThreadLocal
         currentUsername.set(username);

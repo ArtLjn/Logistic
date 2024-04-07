@@ -2,14 +2,18 @@ package org.example.back.demos.controller;
 
 import org.example.back.demos.controller.apo.BuildClientOptsForPrivateKey;
 import org.example.back.demos.model.bo.CreateTransOrderBo;
+import org.example.back.demos.service.OrderService;
 import org.example.back.demos.service.TransService;
 import org.example.back.demos.util.AjaxResult;
 import org.example.back.demos.util.ReflectionUtils;
+import org.fisco.bcos.sdk.transaction.model.dto.TransactionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Objects;
+
+import static org.example.back.demos.controller.apo.BuildClientOptsForPrivateKeyImpl.currentUsername;
 
 /**
  * @author ljn
@@ -22,10 +26,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TransController {
 
     private final TransService transService;
-
+    private final OrderService orderService;
     @Autowired
-    public TransController(TransService transService) {
+    public TransController(TransService transService, OrderService orderService) {
         this.transService = transService;
+        this.orderService = orderService;
     }
 
     @BuildClientOptsForPrivateKey
@@ -33,12 +38,42 @@ public class TransController {
     public AjaxResult<String> createTrans(@RequestBody CreateTransOrderBo createTransOrderBo) {
         try {
             ReflectionUtils.checkNonNullFields(createTransOrderBo, CreateTransOrderBo.class);
-            if (!transService.CreateTransOrder(createTransOrderBo)) {
+            TransactionResponse transactionResponse = transService.CreateTransOrder(createTransOrderBo);
+            if (!Objects.equals(transactionResponse.getReceiptMessages(),"Success")) {
                 return new AjaxResult<>(400,"创建失败");
+            }else if (!orderService.setSaveData(currentUsername.get(), transactionResponse.getReturnObject().get(0).toString())) {
+                return new AjaxResult<>(400,"持久化失败");
             }
         } catch (Exception e) {
             return new AjaxResult<>(400,e.getMessage());
         }
         return new AjaxResult<>(200,"success");
+    }
+
+    @BuildClientOptsForPrivateKey
+    @GetMapping("/queryTransOrder")
+    public AjaxResult<Object> queryTransOrder(){
+        List<Object> list;
+        try {
+            list = transService.getOwnerAllTransOrderData(currentUsername.get());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        AjaxResult<Object> ajaxResult = new AjaxResult<>(200,"success");
+        ajaxResult.setData(list);
+        return ajaxResult;
+    }
+
+    @GetMapping("queryTransOrderById")
+    public AjaxResult<Object> queryTransOrderById(@RequestParam("orderId") String orderId){
+        Object list;
+        try {
+            list = transService.getTransOrder(orderId);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        AjaxResult<Object> ajaxResult = new AjaxResult<>(200,"success");
+        ajaxResult.setData(list);
+        return ajaxResult;
     }
 }

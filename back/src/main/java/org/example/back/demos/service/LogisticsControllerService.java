@@ -41,7 +41,7 @@ public class LogisticsControllerService {
     this.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
   }
 
-  public CallResponse GetPerChaseCompany(LogisticsControllerGetPerChaseCompanyInputBO input) throws Exception {
+public CallResponse GetPerChaseCompany(LogisticsControllerGetPerChaseCompanyInputBO input) throws Exception {
     return this.txProcessor.sendCall(this.client.getCryptoSuite().getCryptoKeyPair().getAddress(), this.address, ABI, "GetPerChaseCompany", input.toArgs());
   }
 
