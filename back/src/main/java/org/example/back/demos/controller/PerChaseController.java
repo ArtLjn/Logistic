@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
 
-import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUsername;
+import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUser;
 
 /**
  * @author ljn
@@ -40,7 +40,7 @@ public class PerChaseController {
             TransactionResponse transactionResponse = perChaseService.CreatePerChase(createPerChaseOrderBo);
             if (!Objects.equals(transactionResponse.getReceiptMessages(),"Success")) {
                 return new AjaxResult<>(400,transactionResponse.getReturnMessage());
-            } else if (!orderService.setSaveData(currentUsername.get(), transactionResponse.getReturnObject().get(0).toString())) {
+            } else if (!orderService.setSaveData(currentUser.get(), transactionResponse.getReturnObject().get(0).toString())) {
                 return new AjaxResult<>(400,"持久化失败");
             }
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class PerChaseController {
     public AjaxResult<Object> queryPerChaseOrder(){
         List<Object> list;
         try {
-            list = perChaseService.getOwnerAllPerChaseOrderData(currentUsername.get());
+            list = perChaseService.getOwnerAllPerChaseOrderData(currentUser.get());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -62,6 +62,7 @@ public class PerChaseController {
         ajaxResult.setData(list);
         return ajaxResult;
     }
+
 
     @GetMapping("queryPerChaseOrderById")
     public AjaxResult<Object> queryPerChaseOrderById(@RequestParam("orderId") String orderId){

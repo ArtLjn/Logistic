@@ -2,6 +2,7 @@ package org.example.back.demos.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.example.back.demos.dao.OrderMapper;
+import org.example.back.demos.model.Role;
 import org.example.back.demos.model.entity.OrderEntity;
 import org.example.back.demos.model.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +29,7 @@ public class OrderService {
         this.orderMapper = orderMapper;
     }
 
-    public boolean setSaveData(String username, String orderId) {
-        // 根据客户姓名获取用户信息
-        UserEntity userEntity = userService.GetUser(username);
-        if (Objects.isNull(userEntity)) {
-            return false;
-        }
+    public boolean setSaveData(UserEntity userEntity, String orderId) {
         // 创建一个 OrderEntity 对象
         OrderEntity pco = new OrderEntity();
         // 将订单 ID 和公司地址设置为 OrderEntity 对象
@@ -43,13 +39,10 @@ public class OrderService {
         return orderMapper.insert(pco) > 0;
     }
 
-    public List<OrderEntity>  getOrderList(String username) {
-        // 根据用户名获取用户实体对象
-        UserEntity userEntity = userService.GetUser(username);
-        if (Objects.isNull(userEntity)) {
+    public List<OrderEntity>  getOrderList(UserEntity userEntity, Role role) {
+       if (Role.getRole(userEntity.getRole()) != role) {
             return null;
         }
-
         // 创建一个 QueryWrapper 对象，用于查询指定公司地址的采购订单
         QueryWrapper<OrderEntity> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("company_address", userEntity.getCompanyAddress());

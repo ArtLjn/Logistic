@@ -1,8 +1,11 @@
 package org.example.back.demos.service;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import org.example.back.demos.model.Role;
 import org.example.back.demos.model.bo.*;
 import org.example.back.demos.model.entity.OrderEntity;
+import org.example.back.demos.model.entity.UserEntity;
 import org.fisco.bcos.sdk.transaction.model.dto.TransactionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +24,9 @@ import java.util.Objects;
 public class TransService {
     private final LogisticsControllerService logisticsControllerService;
     private final OrderService orderService;
+
     @Autowired
-    public TransService(LogisticsControllerService logisticsControllerService, OrderService orderService) {
+    public TransService(LogisticsControllerService logisticsControllerService, OrderService orderService, UserService userService) {
         this.logisticsControllerService = logisticsControllerService;
         this.orderService = orderService;
     }
@@ -40,8 +44,8 @@ public class TransService {
     }
 
     // 获取所有采购订单数据
-    public List<Object> getOwnerAllTransOrderData(String username) throws Exception {
-        List<OrderEntity> transOrderEntities = orderService.getOrderList(username);
+    public List<Object> getOwnerAllTransOrderData(UserEntity userEntity) throws Exception {
+        List<OrderEntity> transOrderEntities = orderService.getOrderList(userEntity, Role.TransCompany);
         if (transOrderEntities.isEmpty()) return null;
         // 创建一个列表用于存储结果
         List<Object> list = new ArrayList<>();
@@ -54,6 +58,24 @@ public class TransService {
             }
         }
         // 返回列表中的数据
+        return list;
+    }
+
+    public List<Object> getPerChaseHasTransOrderData(UserEntity userEntity) throws Exception {
+        LogisticsControllerGetPerChaseCompanyInputBO logisticsControllerGetPerChaseCompanyInputBO = new LogisticsControllerGetPerChaseCompanyInputBO();
+        logisticsControllerGetPerChaseCompanyInputBO.setCompany_addr(userEntity.getCompanyAddress());
+        Object object = JSON.parseArray(logisticsControllerService.GetPerChaseCompany(logisticsControllerGetPerChaseCompanyInputBO).getReturnObject().get(0).toString()).get(0);
+        JSONObject jsonObject = JSON.parseObject(object.toString());
+        JSONObject jsonObject1 = JSON.parseObject(jsonObject.get("fields").toString());
+        String transStr = jsonObject1.get("transList").toString();
+        String[] tranList = transStr.split("-");
+        List<Object> list = new ArrayList<>();
+        for (String trans : tranList) {
+            Object data = getTransOrder(trans);
+            if (Objects.nonNull(data)) {
+                list.add(data);
+            }
+        }
         return list;
     }
 }

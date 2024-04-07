@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
 
-import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUsername;
+import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUser;
 
 /**
  * @author ljn
@@ -41,7 +41,7 @@ public class TransController {
             TransactionResponse transactionResponse = transService.CreateTransOrder(createTransOrderBo);
             if (!Objects.equals(transactionResponse.getReceiptMessages(),"Success")) {
                 return new AjaxResult<>(400,"创建失败");
-            }else if (!orderService.setSaveData(currentUsername.get(), transactionResponse.getReturnObject().get(0).toString())) {
+            }else if (!orderService.setSaveData(currentUser.get(), transactionResponse.getReturnObject().get(0).toString())) {
                 return new AjaxResult<>(400,"持久化失败");
             }
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class TransController {
     public AjaxResult<Object> queryTransOrder(){
         List<Object> list;
         try {
-            list = transService.getOwnerAllTransOrderData(currentUsername.get());
+            list = transService.getOwnerAllTransOrderData(currentUser.get());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -63,7 +63,19 @@ public class TransController {
         ajaxResult.setData(list);
         return ajaxResult;
     }
-
+    @BuildClientOptsForPrivateKey
+    @GetMapping("/queryPerChaseOrderByTransOrder")
+    public AjaxResult<Object> queryPerChaseByTransOrder() {
+        List<Object> list;
+        try {
+            list = transService.getPerChaseHasTransOrderData(currentUser.get());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        AjaxResult<Object> ajaxResult = new AjaxResult<>(200,"success");
+        ajaxResult.setData(list);
+        return ajaxResult;
+    }
     @GetMapping("queryTransOrderById")
     public AjaxResult<Object> queryTransOrderById(@RequestParam("orderId") String orderId){
         Object list;

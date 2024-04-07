@@ -42,7 +42,7 @@ public class BuildClientOptsForPrivateKeyImpl {
 
     @Autowired
     public Client client;
-    public static final ThreadLocal<String> currentUsername = new ThreadLocal<>();
+    public static final ThreadLocal<UserEntity> currentUser = new ThreadLocal<>();
 
     @Pointcut("@annotation(org.example.back.demos.controller.aop.BuildClientOptsForPrivateKey)")
     public void tokenRequiredPointcut() {
@@ -65,7 +65,7 @@ public class BuildClientOptsForPrivateKeyImpl {
            throw new RuntimeException("Authorization verify failed");
         }
         // 存储用户名到ThreadLocal
-        currentUsername.set(username);
+        currentUser.set(userEntity);
         this.client.getCryptoSuite().setCryptoKeyPair(client.getCryptoSuite().createKeyPair(userEntity.getPrivateKey()));
         logisticsControllerService.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
         return null;
@@ -73,6 +73,6 @@ public class BuildClientOptsForPrivateKeyImpl {
     @After("tokenRequiredPointcut()")
     public void afterTokenRequired(JoinPoint joinPoint) {
         // 清除存储在ThreadLocal中的用户名
-        currentUsername.remove();
+        currentUser.remove();
     }
 }

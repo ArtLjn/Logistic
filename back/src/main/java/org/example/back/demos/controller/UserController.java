@@ -1,6 +1,5 @@
 package org.example.back.demos.controller;
 
-import org.example.back.demos.controller.aop.BuildClientOptsForPrivateKey;
 import org.example.back.demos.model.Role;
 import org.example.back.demos.model.bo.LoginBo;
 import org.example.back.demos.model.bo.LogisticsControllerCreatePerChaseCompanyInputBO;
@@ -18,9 +17,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
-
-import static org.example.back.demos.controller.aop.BuildClientOptsForPrivateKeyImpl.currentUsername;
 
 /**
  * @author ljn
@@ -46,14 +45,26 @@ public class UserController {
         } catch (IllegalAccessException e) {
             return new AjaxResult<>(400,e.getMessage());
         }
-        boolean isLogin = userService.Login(loginBean);
-        if(isLogin){
+        UserEntity userEntity = userService.Login(loginBean);
+        if(userEntity != null){
             String token = TokenUtil.sign(loginBean.getUsername(),String.valueOf(System.currentTimeMillis()));
-            AjaxResult<String> result = new AjaxResult<>(200,"登录成功");
-            result.setData(token);
-            return result;
+            return getStringAjaxResult(token, userEntity);
         }
         return new AjaxResult<>(400,"登录失败");
+    }
+
+    private static AjaxResult<String> getStringAjaxResult(String token, UserEntity userEntity) {
+        AjaxResult<String> result = new AjaxResult<>(200,"登录成功");
+        Map<String,Object> map = new HashMap<>();
+        map.put("token", token);
+        map.put("role",userEntity.getRole());
+        map.put("username", userEntity.getUsername());
+        map.put("company_address", userEntity.getCompanyAddress());
+        map.put("company_name", userEntity.getCompanyName());
+        map.put("location", userEntity.getLocation());
+        map.put("business_scope", userEntity.getBusinessScope());
+        result.setData(map);
+        return result;
     }
 
     @PostMapping("/register")
@@ -97,12 +108,12 @@ public class UserController {
         return new AjaxResult<>(200,"注册成功");
     }
 
-    @BuildClientOptsForPrivateKey
+//    @BuildClientOptsForPrivateKey
     @GetMapping("/queryCompanyMsg")
-    public AjaxResult<Object> queryPerChaseCompany(){
+    public AjaxResult<Object> queryPerChaseCompany(@RequestParam("company_address") String companyAddress){
         Object list;
         try {
-            list = userService.getCompanyMsg(currentUsername.get());
+            list = userService.getCompanyMsg(companyAddress);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

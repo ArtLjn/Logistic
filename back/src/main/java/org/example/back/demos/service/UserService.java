@@ -16,6 +16,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -35,13 +37,12 @@ public class UserService {
         this.logisticsControllerService = logisticsControllerService;
     }
 
-    public boolean Login(LoginBo loginBean) {
+    public UserEntity Login(LoginBo loginBean) {
         loginBean.setPassword(SecureUtil.md5(loginBean.getPassword()));
         QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username", loginBean.getUsername())
                     .eq("password", loginBean.getPassword());
-        UserEntity userEntity = userMapper.selectOne(queryWrapper);
-        return userEntity != null;
+        return userMapper.selectOne(queryWrapper);
     }
     
     public int CreateUser(UserEntity userEntity) {
@@ -62,22 +63,25 @@ public class UserService {
         return GetUser(username) != null;
     }
 
-    public Object getCompanyMsg(String username) throws Exception {
-        UserEntity userEntity = this.GetUser(username);
+    public Object getCompanyMsg(String address) throws Exception {
+        QueryWrapper<UserEntity>  queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("company_address", address);
+        UserEntity userEntity = userMapper.selectOne(queryWrapper);
         if (Objects.isNull(userEntity)) {
             return null;
         }
-        Object object = new Object();
+        Map<String,Object> object = new HashMap<>();
+        object.put("role",userEntity.getRole());
         switch (userEntity.getRole()) {
             case Role.permission.PER_CHASE:
                 LogisticsControllerGetPerChaseCompanyInputBO logisticsControllerGetPerChaseCompanyInputBO = new LogisticsControllerGetPerChaseCompanyInputBO();
                 logisticsControllerGetPerChaseCompanyInputBO.setCompany_addr(userEntity.getCompanyAddress());
-                object = JSON.parseArray(logisticsControllerService.GetPerChaseCompany(logisticsControllerGetPerChaseCompanyInputBO).getReturnObject().get(0).toString()).get(0);
+                object.put("chain",JSON.parseArray(logisticsControllerService.GetPerChaseCompany(logisticsControllerGetPerChaseCompanyInputBO).getReturnObject().get(0).toString()).get(0));
                 break;
             case Role.permission.TRANS:
                 LogisticsControllerGetTransCompanyInputBO logisticsControllerGetTransCompanyInputBO = new LogisticsControllerGetTransCompanyInputBO();
                 logisticsControllerGetTransCompanyInputBO.setCompany_addr(userEntity.getCompanyAddress());
-                object = JSON.parseArray(logisticsControllerService.GetTransCompany(logisticsControllerGetTransCompanyInputBO).getReturnObject().get(0).toString()).get(0);
+                object.put("chain",JSON.parseArray(logisticsControllerService.GetTransCompany(logisticsControllerGetTransCompanyInputBO).getReturnObject().get(0).toString()).get(0));
                 break;
         }
         return object;

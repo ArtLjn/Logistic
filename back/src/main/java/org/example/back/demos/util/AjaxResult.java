@@ -18,7 +18,7 @@ public class AjaxResult<T> implements Serializable {
     private String info;
     //数据结果，泛型，可以是列表、单个对象、数字、布尔值等
     @ApiModelProperty("返回数据")
-    private T data;
+    private Object data;
 
     public AjaxResult() {
     }
@@ -44,11 +44,11 @@ public class AjaxResult<T> implements Serializable {
         this.info = info;
     }
 
-    public T getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
