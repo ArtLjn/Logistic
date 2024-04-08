@@ -27,7 +27,7 @@
         </el-row>
         <el-row>
           <el-col :span="22" :offset="1">
-            <el-table :data="procureTable" :height="600">
+            <el-table :data="procureTable" :height="400">
               <el-table-column prop="primaryKey" label="订单号"></el-table-column>
               <el-table-column prop="fields.materials" label="采购物资"></el-table-column>
               <el-table-column prop="fields.perchaseTime" label="采购时间"></el-table-column>

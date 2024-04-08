@@ -20,11 +20,11 @@ system:
   hexPrivateKey: "1753f860fb224bc54ba38b6544d9d97d75062ec25083863368fab8a916714d85"
   groupId: 1
   contract:
-    logisticsControllerAddress: "0x92d8f3a282c1045295fe121a8f6d96e621501523"
+    logisticsControllerAddress: "0x0930e0b333ad6f8847e6e8a7b71d3c6e85dbe23d"
 cryptoMaterial:
   certPath: conf
 network:
   peers:
-    - 127.0.0.1:20200
-    - 127.0.0.1:20201
+    - 192.168.1.102:20200
+    - 192.168.1.102:20201
 
