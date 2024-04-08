@@ -50,7 +50,7 @@
           <el-divider></el-divider>
           <el-row>
             <el-col :span="22" :offset="1">
-              <el-table :data="transTable">
+              <el-table :data="transTable" :height="400">
                 <el-table-column prop="primaryKey" label="采购订单号"></el-table-column>
                 <el-table-column prop="fields.perchaseCompany" label="采购公司"></el-table-column>
                 <el-table-column prop="fields.transCompany" label="运输公司"></el-table-column>

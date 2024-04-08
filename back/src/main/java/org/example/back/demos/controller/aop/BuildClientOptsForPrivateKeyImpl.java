@@ -49,7 +49,7 @@ public class BuildClientOptsForPrivateKeyImpl {
     }
 
     @Before("tokenRequiredPointcut()")
-    public AjaxResult<String> beforeTokenRequired(JoinPoint joinPoint) throws Exception {
+    public AjaxResult<String> beforeTokenRequired(JoinPoint joinPoint)  {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         String token = request.getHeader("Authorization");
         // 非空判断：@RequestHeader("Authorization") String header
@@ -67,7 +67,11 @@ public class BuildClientOptsForPrivateKeyImpl {
         // 存储用户名到ThreadLocal
         currentUser.set(userEntity);
         this.client.getCryptoSuite().setCryptoKeyPair(client.getCryptoSuite().createKeyPair(userEntity.getPrivateKey()));
-        logisticsControllerService.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
+        try {
+            logisticsControllerService.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
         return null;
     }
     @After("tokenRequiredPointcut()")

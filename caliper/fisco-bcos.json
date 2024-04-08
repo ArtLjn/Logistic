@@ -1,0 +1,40 @@
+{
+    "caliper": {
+        "blockchain": "fisco-bcos"
+    },
+    "fisco-bcos": {
+        "config": {
+            "privateKey": "cd54b9f968f9cbeb780209a94d743878faac5d35c58e08e90d1717c6d805167f",
+            "account": "0x0b457d5d2d72cea12efc64a6cfbae572a85fdfb7"
+        },
+        "network": {
+            "nodes": [
+                {
+                    "ip": "127.0.0.1",
+                    "rpcPort": "8545",
+                    "channelPort": "20200"
+                }
+            ],
+            "authentication": {
+                "key": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/sdk.key",
+                "cert": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/sdk.crt",
+                "ca": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/ca.crt"
+            },
+            "groupID": 1,
+            "timeout": 100000
+        },
+        "smartContracts": [
+            {
+                "id": "logistics",
+                "address": "0x6187c9181eee2b1d3b69fd701c0db6dc7daca7a3",
+                "language": "precompiled",
+                "version": "v0"
+            }
+        ]
+    },
+    "info": {
+        "Version": "2.0.0",
+        "Size": "4 Nodes",
+        "Distribution": "Single Host"
+    }
+}

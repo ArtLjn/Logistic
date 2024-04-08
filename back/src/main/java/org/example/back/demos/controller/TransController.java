@@ -40,7 +40,7 @@ public class TransController {
             ReflectionUtils.checkNonNullFields(createTransOrderBo, CreateTransOrderBo.class);
             TransactionResponse transactionResponse = transService.CreateTransOrder(createTransOrderBo);
             if (!Objects.equals(transactionResponse.getReceiptMessages(),"Success")) {
-                return new AjaxResult<>(400,"创建失败");
+                return new AjaxResult<>(400,transactionResponse.getReceiptMessages());
             }else if (!orderService.setSaveData(currentUser.get(), transactionResponse.getReturnObject().get(0).toString())) {
                 return new AjaxResult<>(400,"持久化失败");
             }
