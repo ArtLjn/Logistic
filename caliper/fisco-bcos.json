@@ -16,9 +16,9 @@
                 }
             ],
             "authentication": {
-                "key": "caliper/fisco/nodes/127.0.0.1/sdk/sdk.key",
-                "cert": "caliper/fisco/nodes/127.0.0.1/sdk/sdk.crt",
-                "ca": "caliper/fisco/nodes/127.0.0.1/sdk/ca.crt"
+                "key": "caliper/fisco/sdk.key",
+                "cert": "caliper/fisco/sdk.crt",
+                "ca": "caliper/fisco/ca.crt"
             },
             "groupID": 1,
             "timeout": 100000
