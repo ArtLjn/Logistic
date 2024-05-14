@@ -5,8 +5,8 @@ module.exports.info = 'caliper-contract';
 let bc, contx;
 
 const accountList = [
-    '0xd11096537db03e8ba92692cdec3df1b527390a01',
-    '0x6b4e306b57774d78723127aa818e28ee806a84c4'
+    '0x896c79502b93f69b0b1dae553a74ae4fa9112923',
+    '0x36aa8d3ff842a5e8d286bf4fb72d54119a58e9d2'
 ]
 
 module.exports.init = function (blockchain,context,args) {

@@ -37,7 +37,7 @@ contract OrderStorage is TableTools {
         // 判断提交采购订单的用户是不是存在并且是已经注册的采购公司成员
         require(companyStorage.hasExistPerChaseCompany(fieldList[3]),"采购公司不存在");
         string memory index = getOrderIndex(PerChaseOrder);
-        string memory new_fields = string(abi.encodePacked(fields,",",addrStr,",,,"));
+        string memory new_fields = string(abi.encodePacked(fields,",",fieldList[3],",,,"));
         int8 code = insertOneRecord(tb_perchase_order,index,new_fields,false);
         require(code == SUCCESS_RETURN,INSERT_ERROR);
         emit INSERT_EVENT(code,new_fields);
@@ -98,10 +98,10 @@ contract OrderStorage is TableTools {
         string memory transList = concatTrans(perChaseMsg[2],index);
         companyStorage.updatePerChaseCompany(fieldList[1],perChaseMsg,2,transList);
         //绑定运输公司与运输订单信息
-        string[] memory transCompanyMsg = companyStorage.getTransCompanyToArray(addrStr);
+        string[] memory transCompanyMsg = companyStorage.getTransCompanyToArray(fieldList[2]);
         //绑定运输公司与运输订单信息
         string memory transListForTrans = concatTrans(transCompanyMsg[3],index);
-        companyStorage.updateTransCompany(addrStr,transCompanyMsg,3,transListForTrans);
+        companyStorage.updateTransCompany(fieldList[2],transCompanyMsg,3,transListForTrans);
         //绑定采购订单与运输订单的信息
         string[] memory perChaseOrder = getPerChaseOrderByArray(fieldList[0]);
         //添加运输公司信息

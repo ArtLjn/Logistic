@@ -8,20 +8,20 @@ test:
   - label: PerChaseCompany
     description: fiscobcos-caliper-test
     txNumber:
-    - 10
+    - 100
     rateControl:
     - type: fixed-rate
       opts:
-        tps: 10
+        tps: 5
     callback: ./PerChaseCompany.js
   - label: TransCompany
     description: fiscobcos-caliper-test
     txNumber:
-    - 10
+    - 100
     rateControl:
     - type: fixed-rate
       opts:
-        tps: 10
+        tps: 5
     callback: ./TransCompany.js
 monitor:
   type:

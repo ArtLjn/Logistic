@@ -16,9 +16,9 @@
                 }
             ],
             "authentication": {
-                "key": "caliper/fisco/sdk.key",
-                "cert": "caliper/fisco/sdk.crt",
-                "ca": "caliper/fisco/ca.crt"
+                "key": "/Volumes/newElements/设计赛/logistics/caliper/fisco/sdk.key",
+                "cert": "/Volumes/newElements/设计赛/logistics/caliper/fisco/sdk.crt",
+                "ca": "/Volumes/newElements/设计赛/logistics/caliper/fisco/ca.crt"
             },
             "groupID": 1,
             "timeout": 100000
