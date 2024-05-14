@@ -16,9 +16,9 @@
                 }
             ],
             "authentication": {
-                "key": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/sdk.key",
-                "cert": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/sdk.crt",
-                "ca": "/Users/ljn/Documents/fisco/nodes/127.0.0.1/sdk/ca.crt"
+                "key": "caliper/fisco/nodes/127.0.0.1/sdk/sdk.key",
+                "cert": "caliper/fisco/nodes/127.0.0.1/sdk/sdk.crt",
+                "ca": "caliper/fisco/nodes/127.0.0.1/sdk/ca.crt"
             },
             "groupID": 1,
             "timeout": 100000

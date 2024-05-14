@@ -1,0 +1,838 @@
+info|2024-05-14 11:46:15.317845|[INITIALIZER][initGlobalConfig],enableCompress=true,compatibilityVersion=2.9.1,versionNumber=34144512,enableStat=false,chainId=1,useSMCrypto=false
+info|2024-05-14 11:46:15.318447|[INITIALIZER][SecureInitializer]loading privateKey
+info|2024-05-14 11:46:15.327952|[INITIALIZER][SecureInitializer]get pub of node,nodeID=cea6ac0934f38d6a501a3b4a8c516a01c5a0891aff29177f9ebdc7c4bdd071f59e0787e7c36d2af2a690f946c471ddbccac5ae4d8ccac0984840340602af4990
+info|2024-05-14 11:46:15.328282|[INITIALIZER][SecureInitializer]use user certificate,file=conf//node.crt
+info|2024-05-14 11:46:15.328664|[INITIALIZER][SecureInitializer]use ca certificate,file=conf//ca.crt
+info|2024-05-14 11:46:15.328687|[INITIALIZER][SecureInitializer]use ca,file=conf//
+info|2024-05-14 11:46:15.328720|[INITIALIZER][SecureInitializer][initChannelCertConfig]enable rsa cert for channel ,conf//channel_cert/ certs will be used for channel ssl,dataPath=conf/
+info|2024-05-14 11:46:15.329891|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30300
+info|2024-05-14 11:46:15.329957|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+info|2024-05-14 11:46:15.329992|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:15.330007|[P2P][Service] heartBeat,connected count=0
+info|2024-05-14 11:46:15.330030|[INITIALIZER][RPCInitializer],network_security.check_cert_issuer=true
+info|2024-05-14 11:46:15.330439|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30300
+info|2024-05-14 11:46:15.330514|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:15.330551|[CHANNEL][ChannelServer::run],threadPoolSize=8
+info|2024-05-14 11:46:15.330580|[CHANNEL]ChannelRPCServer started
+info|2024-05-14 11:46:15.330582|[INITIALIZER][RPCInitializer: ChannelRPCHttpServer started.],disableDynamicGroup=false,threadSize=8
+info|2024-05-14 11:46:15.330586|[INITIALIZER][LedgerInitializer]initConfig
+info|2024-05-14 11:46:15.330627|[LedgerInitializer],groupConfigPath=conf/
+info|2024-05-14 11:46:15.330828|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58691
+info|2024-05-14 11:46:15.330850|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+info|2024-05-14 11:46:15.331309|[INITIALIZER][initSingleLedger] [GroupId], LedgerConstructor:  1,configFileName=conf/group.1.genesis,dataDir=data/
+info|2024-05-14 11:46:15.331401|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58693
+info|2024-05-14 11:46:15.331410|[g:1][LedgerParam][parseGenesisConfig]initConsensusConfig/initStorageConfig/initTxConfig,configFile=conf/group.1.genesis
+info|2024-05-14 11:46:15.331419|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+info|2024-05-14 11:46:15.331444|[g:1][LedgerParam][initConsensusConfig],type=pbft,consensusTimeout=3,maxTxNum=1000,txGasLimit=300000000
+info|2024-05-14 11:46:15.331452|[g:1][LedgerParam][parsePublicKeyListOfSection],sectionName=consensus,it.first=cea6ac0934f38d6a501a3b4a8c516a01c5a0891aff29177f9ebdc7c4bdd071f59e0787e7c36d2af2a690f946c471ddbccac5ae4d8ccac0984840340602af4990
+info|2024-05-14 11:46:15.331455|[g:1][LedgerParam][parsePublicKeyListOfSection],sectionName=consensus,it.first=f110ccf00618c7c21cf38a7162269922dfeb8128a3498c319e3a77b778c15e96197ed94bfef29d5f636da6115f0abe4ca2803461a72548492bcb71eeb68dc413
+info|2024-05-14 11:46:15.331457|[g:1][LedgerParam][parsePublicKeyListOfSection],totalPubKeySize=2
+info|2024-05-14 11:46:15.331479|[g:1][LedgerParam][max_block_range],maxBlockRange=0,maxBlockPerProcess=3
+info|2024-05-14 11:46:15.331482|[g:1][LedgerParam][parseGenesisConfig],timestamp=1715652901000
+info|2024-05-14 11:46:15.331487|[g:1][LedgerParam]setEVMFlags,enableFreeStorageVMSchedule=false,evmFlags=0
+info|2024-05-14 11:46:15.331507|[g:1][LedgerParam]store evmFlag,evmFlag=0
+info|2024-05-14 11:46:15.331546|[g:1][LedgerParam]store consensus time,consensusTimeout=3
+info|2024-05-14 11:46:15.331551|[g:1][LedgerParam][initMark],genesisMark=1-cea6ac0934f38d6a501a3b4a8c516a01c5a0891aff29177f9ebdc7c4bdd071f59e0787e7c36d2af2a690f946c471ddbccac5ae4d8ccac0984840340602af4990,f110ccf00618c7c21cf38a7162269922dfeb8128a3498c319e3a77b778c15e96197ed94bfef29d5f636da6115f0abe4ca2803461a72548492bcb71eeb68dc413,-pbft-storage-0-1000-300000000-3
+info|2024-05-14 11:46:15.331553|[g:1][LedgerParam][initIniConfig]initTxPoolConfig/initSyncConfig/initTxExecuteConfig,configFile=conf/group.1.ini
+info|2024-05-14 11:46:15.331810|[g:1][LedgerParam][initStorageConfig],stateType=storage,storageDB=rocksdb,storagePath=data//group1/block/RocksDB,baseDir=data//group1,dbtype=mysql,dbip=127.0.0.1,dbport=3306,dbcharset=utf8mb4,initconnections=15,maxconnections=50,scrollThreshold=2000
+info|2024-05-14 11:46:15.331822|[g:1][LedgerParam][initTxPoolConfig],txPoolLimit=150000,memorySizeLimit(MB)=512,notifyWorkerNum=2,txsExpirationTime(ms)=600000
+info|2024-05-14 11:46:15.331826|[g:1][LedgerParam][initSyncConfig],idleWaitMs=200
+info|2024-05-14 11:46:15.331830|[g:1][LedgerParam][initSyncConfig],enableSendTxsByTree=true,enableSendBlockStatusByTree=true
+info|2024-05-14 11:46:15.331833|[g:1][LedgerParam][initSyncConfig],gossipInterval=1000
+info|2024-05-14 11:46:15.331837|[g:1][LedgerParam][initSyncConfig],enableSendBlockStatusByTree=true,gossipInterval=1000,gossipPeers=3,syncTreeWidth=3,maxQueueSizeForBlockSync=536870912,txsStatusGossipMaxPeers=5
+info|2024-05-14 11:46:15.331840|[g:1][LedgerParam][InitTxExecuteConfig],enableParallel=true
+info|2024-05-14 11:46:15.331846|[g:1][LedgerParam][initConsensusIniConfig],maxTTL=2,minBlockGenerationTime=500,enablDynamicBlockSize=true,blockSizeIncreaseRatio=0.5,enableTTLOptimize=true,enablePrepareWithTxsHash=true
+info|2024-05-14 11:46:15.331853|[g:1][LedgerParam][initRPBFTConsensusIniConfig],broadcastPrepareByTree=true,prepareStatusBroadcastPercent=33,maxRequestMissedTxsWaitTime=100,maxRequestPrepareWaitTime=100
+info|2024-05-14 11:46:15.331856|[g:1][LedgerParam][initFlowControlConfig],maxQPS=9223372036854775807,outGoingBandwidth(Bytes)=9223372036854775807
+info|2024-05-14 11:46:15.331858|[g:1][LedgerParam]parseSDKAllowList,sdkAllowList=[],enableSDKAllowListControl=false
+info|2024-05-14 11:46:15.331863|[g:1][LEDGER][initLedger][DBInitializer]
+info|2024-05-14 11:46:15.331865|[g:1][LEDGER]setSDKAllowList,groupId=1,sdkAllowListSize=0
+info|2024-05-14 11:46:15.331867|[g:1][CHANNEL]registerSDKAllowListByGroupId,groupId=1,size=0
+info|2024-05-14 11:46:15.331868|[g:1][CHANNEL]Disable group-level sdk permission control for sdk allowlist is empty
+info|2024-05-14 11:46:15.331872|[g:1][DBINITIALIZER] [initStorageDB]
+info|2024-05-14 11:46:15.331874|[g:1][DBINITIALIZER] [initRocksDBStorage]
+info|2024-05-14 11:46:15.331886|[g:1][ROCKSDB]open rocksDB handler,path=data//group1/block/RocksDB
+error|2024-05-14 11:46:15.331971|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:15.334698|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:15.337122|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:15.338802|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:15.340400|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58691
+info|2024-05-14 11:46:15.340410|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58691,local endpoint=127.0.0.1:30300,nodeID=cea6ac09...
+info|2024-05-14 11:46:15.340418|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58693
+info|2024-05-14 11:46:15.340423|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58693,local endpoint=127.0.0.1:30300,nodeID=f110ccf0...
+info|2024-05-14 11:46:15.340444|[P2P][Service] Connection established,nodeID=f110ccf0...,endpoint=127.0.0.1:58693
+info|2024-05-14 11:46:15.340451|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58691
+info|2024-05-14 11:46:15.340456|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30300,local endpoint=127.0.0.1:58691,nodeID=cea6ac09...
+info|2024-05-14 11:46:15.340489|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58692
+info|2024-05-14 11:46:15.340494|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30301,local endpoint=127.0.0.1:58692,nodeID=f110ccf0...
+warning|2024-05-14 11:46:15.340603|[NETWORK][Session]doRead error,endpoint=127.0.0.1:58693,message=short read
+info|2024-05-14 11:46:15.340607|[NETWORK][Session]drop, call and erase all callbackFunc in this session!,endpoint=127.0.0.1:58693
+warning|2024-05-14 11:46:15.340611|[NETWORK][Session][drop] closing remote 127.0.0.1:58693,reason=Low-level TCP communication error.,endpoint=127.0.0.1:58693
+warning|2024-05-14 11:46:15.340615|[P2P][Service] disconnect error P2PSession,nodeID=f110ccf0...,endpoint=127.0.0.1:58693,errorCode=3,what=Disconnect
+warning|2024-05-14 11:46:15.340620|[P2P][Service] onDisconnect,errorCode=3,what=Dynamic exception type: dev::network::NetworkException
+std::exception::what: Disconnect
+
+warning|2024-05-14 11:46:15.340639|[NETWORK][Session][drop] shutdown failed ,errorValue=9,message=Bad file descriptor
+info|2024-05-14 11:46:15.514791|[g:1][g:1][STORAGE][CachedStorage]Init flushStorage thread
+info|2024-05-14 11:46:15.515099|[g:1][DBINITIALIZER] [init CachedStorage],maxCapacity=32,maxForwardBlock=10
+info|2024-05-14 11:46:15.515120|[g:1][LEDGER][initLedger][initBlockChain]
+info|2024-05-14 11:46:15.515634|[g:1][LEDGER]set enableHexBlock to be false,version=34144512
+info|2024-05-14 11:46:15.515646|[g:1][BLOCKCHAIN][#checkAndBuildGenesisBlock],shouldBuild=false
+info|2024-05-14 11:46:15.515811|[g:1][BLOCKCHAIN][#checkAndBuildGenesisBlock]Already have the 0th block, 0th groupMark is equal to file groupMark.
+info|2024-05-14 11:46:15.515814|[g:1][LEDGER][initLedger]initBlockChain SUCC
+info|2024-05-14 11:46:15.515833|[g:1][DBINITIALIZER] [createStateFactory],type=storage
+info|2024-05-14 11:46:15.515836|[g:1][DBINITIALIZER] createStorageState SUCC
+info|2024-05-14 11:46:15.515838|[g:1][DBINITIALIZER] [createStateFactory SUCC]
+info|2024-05-14 11:46:15.515839|[g:1][DBINITIALIZER] createExecutiveContext...
+info|2024-05-14 11:46:15.515851|[g:1][LEDGER]createGasMetric,vmFlagType=0
+info|2024-05-14 11:46:15.515854|[g:1][LEDGER]createGasMetric
+info|2024-05-14 11:46:15.515858|[g:1][DBINITIALIZER] create precompiledGasFactory and precompiledResultFactory
+info|2024-05-14 11:46:15.515860|[g:1][DBINITIALIZER] createExecutiveContext SUCC
+info|2024-05-14 11:46:15.515862|[g:1][DBINITIALIZER] [setSyncNumForCachedStorage],syncNum=17
+info|2024-05-14 11:46:15.515870|[g:1][LEDGER][initNetworkBandWidthLimiter: outGoingBandwidthLimit has been disabled],groupId=1
+info|2024-05-14 11:46:15.515873|[g:1][LEDGER][QPSLimit has been disabled],groupId=1
+info|2024-05-14 11:46:15.515875|[g:1][LEDGER][initLedger][initBlockVerifier]
+info|2024-05-14 11:46:15.515882|[g:1][LEDGER][initLedger][initBlockVerifier SUCC],evmFlags=0
+info|2024-05-14 11:46:15.515885|[g:1][LEDGER][initLedger][initTxPool],txPoolLimit=150000
+info|2024-05-14 11:46:15.517363|[g:1][LEDGER][initLedger]initTxPool SUCC
+info|2024-05-14 11:46:15.517376|[g:1][LEDGER][initLedger][initSync],idleWaitMs=200,gossipInterval=1000,gossipPeers=3
+info|2024-05-14 11:46:15.517382|[g:1][LEDGER]Init sync master,enableSendBlockStatusByTree=true,enableSendTxsByTree=true
+info|2024-05-14 11:46:15.517768|[g:1][LEDGER][initLedger]initSync SUCC
+info|2024-05-14 11:46:15.517775|[g:1][LEDGER][initLedger][consensusInitFactory]
+info|2024-05-14 11:46:15.517777|[g:1][LEDGER][initLedger][createPBFTSealer]
+info|2024-05-14 11:46:15.517787|[g:1][LEDGER][initLedger][createPBFTSealer],baseDir=data//group1,Protocol=65544
+info|2024-05-14 11:46:15.517818|[g:1][LEDGER][initLedger]createPBFTSealer for PBFT or rPBFT,consensusType=pbft
+info|2024-05-14 11:46:15.517825|[g:1][LEDGER]createConsensusEngine: create PBFTEngine
+info|2024-05-14 11:46:15.517929|[g:1][CONSENSUS][PBFT]Register handler for PBFTEngine
+info|2024-05-14 11:46:15.518266|[g:1][CONSENSUS][PBFT]setMinBlockGenerationTime,minBlockGenerationTime=500,consensusTime=1000
+info|2024-05-14 11:46:15.518308|[g:1][LEDGER][initEventLogFilterManager]initEventLogFilterManager SUCC
+info|2024-05-14 11:46:15.518315|[LedgerInitializer init group succ],groupID=1
+info|2024-05-14 11:46:15.518460|[SafeHttpServer::StartListening]use poll for apple macos platform
+info|2024-05-14 11:46:15.519330|[INITIALIZER][RPCInitializer JsonrpcHttpServer started],jsonrpc_IP=127.0.0.1,jsonrpc_listen_port=8545,jsonrpc_thread_count=8,ipv6=false,disableDynamicGroup=false
+info|2024-05-14 11:46:15.519351|[g:1][LEDGER]startAll...
+info|2024-05-14 11:46:15.519709|[g:1][GossipBlockStatus]start GossipBlockStatus succ
+info|2024-05-14 11:46:15.519726|[g:1][CONSENSUS][ConsensusEngine][Start ConsensusEngineBase]
+info|2024-05-14 11:46:15.519889|[g:1][CONSENSUS][PBFT]^^^^^^^^Report,num=17,sealerIdx=1,hash=66947ac5...,next=18,tx=1,nodeIdx=0
+info|2024-05-14 11:46:15.519928|[g:1][ROCKSDB]open rocksDB handler,path=data//group1/pbftMsgBackup/RocksDB
+info|2024-05-14 11:46:15.615571|[g:1][CONSENSUS][PBFT][PBFT init env successfully]
+info|2024-05-14 11:46:15.615588|[g:1][CONSENSUS][PBFT][Start PBFTEngine...]
+info|2024-05-14 11:46:15.615591|[g:1][CONSENSUS][SEALER][Start sealer module]
+info|2024-05-14 11:46:15.615843|[g:1][EVENT][EventLogFilterManager]start,m_maxBlockRange=0,m_maxBlockPerLoopFilter=3
+warning|2024-05-14 11:46:18.533074|[g:1][CONSENSUS][PBFT]ViewChangeWarning: not caused by omit empty block ,v=0,toV=1,curNum=17,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+warning|2024-05-14 11:46:18.533095|[g:1][CONSENSUS][PBFT]Find disconnectedNode,disconnectedNodeSize=1,sessionSize=0,minValidNodes=2,connectedNodeList=,disconnectedNode=f110ccf0..., ,idx=0
+info|2024-05-14 11:46:18.533111|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=0,toView=1,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=5
+error|2024-05-14 11:46:19.806138|[CHANNEL]Get ca basic failed
+info|2024-05-14 11:46:19.807504|[CHANNEL]channel new connect, host=127.0.0.1:58695
+info|2024-05-14 11:46:19.807520|[CHANNEL]start receive
+info|2024-05-14 11:46:19.836212|[RPC][getClientVersion]request
+info|2024-05-14 11:46:19.856987|[CHANNEL]onClientHandshake,ProtocolVersion=3,clientType=java-sdk,endpoint=127.0.0.1:58695
+info|2024-05-14 11:46:19.888618|[RPC][getGroupList]request
+info|2024-05-14 11:46:19.896772|[RPC][getClientVersion]request
+info|2024-05-14 11:46:19.897670|[RPC][getGroupList]request
+info|2024-05-14 11:46:21.364793|[RPC][getGroupList]request
+info|2024-05-14 11:46:21.397994|[RPC][getGroupList]request
+warning|2024-05-14 11:46:23.038180|[g:1][CONSENSUS][PBFT]ViewChangeWarning: not caused by omit empty block ,v=0,toV=2,curNum=17,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+warning|2024-05-14 11:46:23.038241|[g:1][CONSENSUS][PBFT]Find disconnectedNode,disconnectedNodeSize=1,sessionSize=0,minValidNodes=2,connectedNodeList=,disconnectedNode=f110ccf0..., ,idx=0
+info|2024-05-14 11:46:23.038306|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=0,toView=2,nodeIdx=0,changeCycle=2,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:46:25.078619|[RPC][getGroupList]request
+info|2024-05-14 11:46:25.085945|[RPC][getGroupList]request
+info|2024-05-14 11:46:25.087440|[RPC][getClientVersion]request
+info|2024-05-14 11:46:25.100442|[RPC][getGroupList]request
+info|2024-05-14 11:46:25.101702|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:25.102834|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:25.331183|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:25.331241|[P2P][Service] heartBeat,connected count=0
+info|2024-05-14 11:46:25.331437|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:25.331600|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58698
+info|2024-05-14 11:46:25.331624|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+error|2024-05-14 11:46:25.332045|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:25.333711|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:25.334905|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58698
+info|2024-05-14 11:46:25.334933|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58698,local endpoint=127.0.0.1:30300,nodeID=f110ccf0...
+info|2024-05-14 11:46:25.334998|[P2P][Service] Connection established,nodeID=f110ccf0...,endpoint=127.0.0.1:58698
+info|2024-05-14 11:46:25.335007|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58697
+info|2024-05-14 11:46:25.335015|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30301,local endpoint=127.0.0.1:58697,nodeID=f110ccf0...
+warning|2024-05-14 11:46:25.335068|[NETWORK][Session]doRead error,endpoint=127.0.0.1:58698,message=Connection reset by peer
+info|2024-05-14 11:46:25.335074|[NETWORK][Session]drop, call and erase all callbackFunc in this session!,endpoint=127.0.0.1:58698
+warning|2024-05-14 11:46:25.335088|[P2P][Service] disconnect error P2PSession,nodeID=f110ccf0...,endpoint=127.0.0.1:58698,errorCode=3,what=Disconnect
+warning|2024-05-14 11:46:25.335098|[NETWORK][Session][drop] closing remote 0.0.0.0:0,reason=Low-level TCP communication error.,endpoint=127.0.0.1:58698
+warning|2024-05-14 11:46:25.335111|[P2P][Service] onDisconnect,errorCode=3,what=Dynamic exception type: dev::network::NetworkException
+std::exception::what: Disconnect
+
+warning|2024-05-14 11:46:25.335169|[NETWORK][Session][drop] shutdown failed ,errorValue=9,message=Bad file descriptor
+info|2024-05-14 11:46:26.399689|[RPC][getGroupList]request
+info|2024-05-14 11:46:26.402535|[RPC][getGroupList]request
+warning|2024-05-14 11:46:29.792398|[g:1][CONSENSUS][PBFT]ViewChangeWarning: not caused by omit empty block ,v=0,toV=3,curNum=17,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+warning|2024-05-14 11:46:29.792416|[g:1][CONSENSUS][PBFT]Find disconnectedNode,disconnectedNodeSize=1,sessionSize=0,minValidNodes=2,connectedNodeList=,disconnectedNode=f110ccf0..., ,idx=0
+info|2024-05-14 11:46:29.792436|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=0,toView=3,nodeIdx=0,changeCycle=3,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:46:30.006761|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.007525|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.008912|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:30.009307|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:30.241357|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.242416|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.243201|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.244325|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.302132|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.305513|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.308756|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.310055|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.339202|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.340495|[RPC][getGroupList]request
+info|2024-05-14 11:46:30.341373|[RPC][getClientVersion]request
+info|2024-05-14 11:46:31.408124|[RPC][getGroupList]request
+info|2024-05-14 11:46:31.413587|[RPC][getGroupList]request
+info|2024-05-14 11:46:35.009005|[RPC][getGroupList]request
+info|2024-05-14 11:46:35.010778|[RPC][getGroupList]request
+info|2024-05-14 11:46:35.013721|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:35.015282|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:35.332451|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:35.332609|[P2P][Service] heartBeat,connected count=0
+info|2024-05-14 11:46:35.332988|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:35.333692|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58706
+info|2024-05-14 11:46:35.333788|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+error|2024-05-14 11:46:35.335283|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:35.341317|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:35.345275|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58706
+info|2024-05-14 11:46:35.345313|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58706,local endpoint=127.0.0.1:30300,nodeID=f110ccf0...
+info|2024-05-14 11:46:35.345375|[P2P][Service] Connection established,nodeID=f110ccf0...,endpoint=127.0.0.1:58706
+info|2024-05-14 11:46:35.345408|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58707
+info|2024-05-14 11:46:35.345434|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30301,local endpoint=127.0.0.1:58707,nodeID=f110ccf0...
+warning|2024-05-14 11:46:35.345638|[NETWORK][Session]doRead error,endpoint=127.0.0.1:58706,message=short read
+info|2024-05-14 11:46:35.345713|[NETWORK][Session]drop, call and erase all callbackFunc in this session!,endpoint=127.0.0.1:58706
+warning|2024-05-14 11:46:35.345727|[NETWORK][Session][drop] closing remote 0.0.0.0:0,reason=Low-level TCP communication error.,endpoint=127.0.0.1:58706
+warning|2024-05-14 11:46:35.345749|[P2P][Service] disconnect error P2PSession,nodeID=f110ccf0...,endpoint=127.0.0.1:58706,errorCode=3,what=Disconnect
+error|2024-05-14 11:46:35.345797|[NETWORK][Session]Session inactived
+error|2024-05-14 11:46:35.345800|[NETWORK][Session]Session inactived
+warning|2024-05-14 11:46:35.345803|[NETWORK][Session][drop] shutdown failed ,errorValue=9,message=Bad file descriptor
+warning|2024-05-14 11:46:35.345774|[P2P][Service] onDisconnect,errorCode=3,what=Dynamic exception type: dev::network::NetworkException
+std::exception::what: Disconnect
+
+info|2024-05-14 11:46:36.419415|[RPC][getGroupList]request
+info|2024-05-14 11:46:36.424825|[RPC][getGroupList]request
+warning|2024-05-14 11:46:39.918920|[g:1][CONSENSUS][PBFT]ViewChangeWarning: not caused by omit empty block ,v=0,toV=4,curNum=17,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+warning|2024-05-14 11:46:39.918980|[g:1][CONSENSUS][PBFT]Find disconnectedNode,disconnectedNodeSize=1,sessionSize=0,minValidNodes=2,connectedNodeList=,disconnectedNode=f110ccf0..., ,idx=0
+info|2024-05-14 11:46:39.919020|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=0,toView=4,nodeIdx=0,changeCycle=4,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:46:40.008490|[RPC][getGroupList]request
+info|2024-05-14 11:46:40.010059|[RPC][getGroupList]request
+info|2024-05-14 11:46:40.011955|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:40.012732|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:41.427867|[RPC][getGroupList]request
+info|2024-05-14 11:46:41.433355|[RPC][getGroupList]request
+info|2024-05-14 11:46:45.008081|[RPC][getGroupList]request
+info|2024-05-14 11:46:45.009680|[RPC][getGroupList]request
+info|2024-05-14 11:46:45.011913|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:45.012812|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:45.333849|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:45.334024|[P2P][Service] heartBeat,connected count=0
+info|2024-05-14 11:46:45.334396|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:45.334482|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58719
+info|2024-05-14 11:46:45.334587|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+error|2024-05-14 11:46:45.337191|[NETWORK][Host]Get ca basic failed
+error|2024-05-14 11:46:45.341041|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:45.344150|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58719
+info|2024-05-14 11:46:45.344178|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58719,local endpoint=127.0.0.1:30300,nodeID=f110ccf0...
+info|2024-05-14 11:46:45.344235|[P2P][Service] Connection established,nodeID=f110ccf0...,endpoint=127.0.0.1:58719
+info|2024-05-14 11:46:45.344271|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58720
+info|2024-05-14 11:46:45.344288|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30301,local endpoint=127.0.0.1:58720,nodeID=f110ccf0...
+warning|2024-05-14 11:46:45.344337|[NETWORK][Session]doRead error,endpoint=127.0.0.1:58719,message=short read
+info|2024-05-14 11:46:45.344351|[NETWORK][Session]drop, call and erase all callbackFunc in this session!,endpoint=127.0.0.1:58719
+warning|2024-05-14 11:46:45.344360|[NETWORK][Session][drop] closing remote 127.0.0.1:58719,reason=Low-level TCP communication error.,endpoint=127.0.0.1:58719
+warning|2024-05-14 11:46:45.344380|[P2P][Service] disconnect error P2PSession,nodeID=f110ccf0...,endpoint=127.0.0.1:58719,errorCode=3,what=Disconnect
+error|2024-05-14 11:46:45.344413|[NETWORK][Session]Session inactived
+error|2024-05-14 11:46:45.344417|[NETWORK][Session]Session inactived
+warning|2024-05-14 11:46:45.344404|[P2P][Service] onDisconnect,errorCode=3,what=Dynamic exception type: dev::network::NetworkException
+std::exception::what: Disconnect
+
+warning|2024-05-14 11:46:45.344420|[NETWORK][Session][drop] shutdown failed ,errorValue=9,message=Bad file descriptor
+info|2024-05-14 11:46:46.439521|[RPC][getGroupList]request
+info|2024-05-14 11:46:46.445874|[RPC][getGroupList]request
+info|2024-05-14 11:46:50.006349|[RPC][getGroupList]request
+info|2024-05-14 11:46:50.007013|[RPC][getGroupList]request
+info|2024-05-14 11:46:50.007870|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:50.008260|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:46:51.451864|[RPC][getGroupList]request
+info|2024-05-14 11:46:51.458262|[RPC][getGroupList]request
+info|2024-05-14 11:46:55.006871|[RPC][getGroupList]request
+info|2024-05-14 11:46:55.008228|[RPC][getGroupList]request
+info|2024-05-14 11:46:55.010103|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:46:55.010592|[RPC][getPendingTxSize]request,groupID=1
+warning|2024-05-14 11:46:55.107229|[g:1][CONSENSUS][PBFT]ViewChangeWarning: not caused by omit empty block ,v=0,toV=5,curNum=17,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+warning|2024-05-14 11:46:55.107250|[g:1][CONSENSUS][PBFT]Find disconnectedNode,disconnectedNodeSize=1,sessionSize=0,minValidNodes=2,connectedNodeList=,disconnectedNode=f110ccf0..., ,idx=0
+info|2024-05-14 11:46:55.107269|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=0,toView=5,nodeIdx=0,changeCycle=5,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:46:55.335203|[NETWORK][Host]Connecting to node,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:55.335340|[P2P][Service] heartBeat,connected count=0
+info|2024-05-14 11:46:55.335595|[NETWORK][ASIO]asyncResolveConnect,endpoint=127.0.0.1:30301
+info|2024-05-14 11:46:55.335633|[NETWORK][Host]P2P Recv Connect, From=127.0.0.1:58723
+info|2024-05-14 11:46:55.335680|[NETWORK][Host]P2P StartAccept,Host=0.0.0.0:30300
+error|2024-05-14 11:46:55.338251|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:55.339464|[NETWORK][Host]handshakeServer succ,remote endpoint=127.0.0.1:58723
+info|2024-05-14 11:46:55.339478|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:58723,local endpoint=127.0.0.1:30300,nodeID=f110ccf0...
+info|2024-05-14 11:46:55.339518|[P2P][Service] Connection established,nodeID=f110ccf0...,endpoint=127.0.0.1:58723
+error|2024-05-14 11:46:55.339533|[NETWORK][Host]Get ca basic failed
+info|2024-05-14 11:46:55.342543|[NETWORK][Host]handshakeClient succ,local endpoint=127.0.0.1:58724
+info|2024-05-14 11:46:55.342550|[NETWORK][Host]startPeerSession, Remote=127.0.0.1:30301,local endpoint=127.0.0.1:58724,nodeID=f110ccf0...
+info|2024-05-14 11:46:55.342633|[g:1][NodeTimeMaintenance]updateTimeInfo: update median time offset,updatedMedianTimeOffset=-1,peer=f110ccf0...,peerTime=1715658415341,peerOffset=-1,utcTime=1715658415342
+info|2024-05-14 11:46:56.461467|[RPC][getGroupList]request
+info|2024-05-14 11:46:56.464395|[RPC][getGroupList]request
+info|2024-05-14 11:47:00.005060|[RPC][getGroupList]request
+info|2024-05-14 11:47:00.005479|[RPC][getGroupList]request
+info|2024-05-14 11:47:00.006165|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:00.006446|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:01.468543|[RPC][getGroupList]request
+info|2024-05-14 11:47:01.469743|[RPC][getGroupList]request
+info|2024-05-14 11:47:05.005279|[RPC][getGroupList]request
+info|2024-05-14 11:47:05.006125|[RPC][getGroupList]request
+info|2024-05-14 11:47:05.007169|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:05.007540|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:05.336379|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:06.476087|[RPC][getGroupList]request
+info|2024-05-14 11:47:06.480363|[RPC][getGroupList]request
+info|2024-05-14 11:47:10.004896|[RPC][getGroupList]request
+info|2024-05-14 11:47:10.006484|[RPC][getGroupList]request
+info|2024-05-14 11:47:10.008163|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:10.008816|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:11.484457|[RPC][getGroupList]request
+info|2024-05-14 11:47:11.486821|[RPC][getGroupList]request
+info|2024-05-14 11:47:15.007673|[RPC][getGroupList]request
+info|2024-05-14 11:47:15.010098|[RPC][getGroupList]request
+info|2024-05-14 11:47:15.013770|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:15.015020|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:15.337023|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:15.901905|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=0,toView=5,minView=6,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=6,view=0,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:47:15.902201|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=0,cur_changeCycle=6,curView=0,view=6
+info|2024-05-14 11:47:15.902232|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=6,toView=6,nodeIdx=0,changeCycle=6,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:16.493160|[RPC][getGroupList]request
+info|2024-05-14 11:47:16.498553|[RPC][getGroupList]request
+info|2024-05-14 11:47:16.904435|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=12590e92...,time=0
+info|2024-05-14 11:47:16.904548|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=6,toView=7,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:16.904709|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=6,cur_changeCycle=1,curView=6,view=7
+info|2024-05-14 11:47:17.905980|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=50afd0b0...
+info|2024-05-14 11:47:17.906550|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=7,toView=8,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:17.907879|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=7,cur_changeCycle=1,curView=7,view=8
+info|2024-05-14 11:47:18.911080|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=3826b2c6...,time=0
+info|2024-05-14 11:47:18.911466|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=8,toView=9,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:18.912062|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=8,cur_changeCycle=1,curView=8,view=9
+info|2024-05-14 11:47:19.903506|[RPC][getGroupList]request
+info|2024-05-14 11:47:19.912580|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=3e08061d...
+info|2024-05-14 11:47:19.913092|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=9,toView=10,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:19.914378|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=9,cur_changeCycle=1,curView=9,view=10
+info|2024-05-14 11:47:20.005329|[RPC][getGroupList]request
+info|2024-05-14 11:47:20.006214|[RPC][getGroupList]request
+info|2024-05-14 11:47:20.007508|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:20.007994|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:20.916605|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=98e0344d...,time=0
+info|2024-05-14 11:47:20.917256|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=10,toView=11,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:20.918500|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=10,cur_changeCycle=1,curView=10,view=11
+info|2024-05-14 11:47:21.502316|[RPC][getGroupList]request
+info|2024-05-14 11:47:21.505871|[RPC][getGroupList]request
+info|2024-05-14 11:47:21.917904|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=b6c37d8f...
+info|2024-05-14 11:47:21.918397|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=11,toView=12,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:21.919660|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=11,cur_changeCycle=1,curView=11,view=12
+info|2024-05-14 11:47:22.921053|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=782cb4d2...,time=0
+info|2024-05-14 11:47:22.921394|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=12,toView=13,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:22.921928|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=12,cur_changeCycle=1,curView=12,view=13
+info|2024-05-14 11:47:23.923154|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=36080a86...
+info|2024-05-14 11:47:23.924676|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=13,toView=14,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:23.927041|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=13,cur_changeCycle=1,curView=13,view=14
+info|2024-05-14 11:47:24.929595|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=d55941e9...,time=0
+info|2024-05-14 11:47:24.929994|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=14,toView=15,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:24.930574|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=14,cur_changeCycle=1,curView=14,view=15
+info|2024-05-14 11:47:25.001735|[RPC][getGroupList]request
+info|2024-05-14 11:47:25.002319|[RPC][getGroupList]request
+info|2024-05-14 11:47:25.003017|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:25.003256|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:25.338140|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:25.930995|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=0cdc1690...
+info|2024-05-14 11:47:25.933933|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=15,toView=16,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:25.934582|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=15,cur_changeCycle=1,curView=15,view=16
+info|2024-05-14 11:47:26.512151|[RPC][getGroupList]request
+info|2024-05-14 11:47:26.516866|[RPC][getGroupList]request
+info|2024-05-14 11:47:26.936526|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=3855bf91...,time=0
+info|2024-05-14 11:47:26.936915|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=16,toView=17,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:26.937458|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=16,cur_changeCycle=1,curView=16,view=17
+info|2024-05-14 11:47:27.937691|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=9fc14d21...
+info|2024-05-14 11:47:27.938585|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=17,toView=18,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:27.940329|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=17,cur_changeCycle=1,curView=17,view=18
+info|2024-05-14 11:47:28.942281|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=583cd767...,time=0
+info|2024-05-14 11:47:28.942577|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=18,toView=19,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:28.943973|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=18,cur_changeCycle=1,curView=18,view=19
+info|2024-05-14 11:47:29.944878|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=b323d572...
+info|2024-05-14 11:47:29.945304|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=19,toView=20,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:29.946379|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=19,cur_changeCycle=1,curView=19,view=20
+info|2024-05-14 11:47:30.002602|[RPC][getGroupList]request
+info|2024-05-14 11:47:30.003336|[RPC][getGroupList]request
+info|2024-05-14 11:47:30.004561|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:30.005077|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:30.948564|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=530e6e66...,time=0
+info|2024-05-14 11:47:30.948956|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=20,toView=21,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:30.950603|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=20,cur_changeCycle=1,curView=20,view=21
+info|2024-05-14 11:47:31.522945|[RPC][getGroupList]request
+info|2024-05-14 11:47:31.526972|[RPC][getGroupList]request
+info|2024-05-14 11:47:31.950696|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=ebdad038...
+info|2024-05-14 11:47:31.951524|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=21,toView=22,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:31.953464|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=21,cur_changeCycle=1,curView=21,view=22
+info|2024-05-14 11:47:32.955984|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=865d02be...,time=1
+info|2024-05-14 11:47:32.956630|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=22,toView=23,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:32.957272|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=22,cur_changeCycle=1,curView=22,view=23
+info|2024-05-14 11:47:33.957839|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=1fea8fcf...
+info|2024-05-14 11:47:33.958118|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=23,toView=24,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:33.958793|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=23,cur_changeCycle=1,curView=23,view=24
+info|2024-05-14 11:47:34.960036|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=0560b17c...,time=0
+info|2024-05-14 11:47:34.960418|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=24,toView=25,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:34.960961|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=24,cur_changeCycle=1,curView=24,view=25
+info|2024-05-14 11:47:35.004431|[RPC][getGroupList]request
+info|2024-05-14 11:47:35.006167|[RPC][getGroupList]request
+info|2024-05-14 11:47:35.009247|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:35.010159|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:35.339121|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:35.962084|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=9936782c...
+info|2024-05-14 11:47:35.962914|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=25,toView=26,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:35.964829|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=25,cur_changeCycle=1,curView=25,view=26
+info|2024-05-14 11:47:36.533219|[RPC][getGroupList]request
+info|2024-05-14 11:47:36.539565|[RPC][getGroupList]request
+info|2024-05-14 11:47:36.965990|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=46a26bd6...,time=1
+info|2024-05-14 11:47:36.966476|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=26,toView=27,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:36.968285|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=26,cur_changeCycle=1,curView=26,view=27
+info|2024-05-14 11:47:37.968397|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=639a19d8...
+info|2024-05-14 11:47:37.968910|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=27,toView=28,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:37.970019|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=27,cur_changeCycle=1,curView=27,view=28
+info|2024-05-14 11:47:38.970165|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=1d7a284b...,time=0
+info|2024-05-14 11:47:38.970267|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=28,toView=29,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:38.970755|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=28,cur_changeCycle=1,curView=28,view=29
+info|2024-05-14 11:47:39.970521|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=6d59751b...
+info|2024-05-14 11:47:39.970717|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=29,toView=30,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:39.971290|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=29,cur_changeCycle=1,curView=29,view=30
+info|2024-05-14 11:47:40.005081|[RPC][getGroupList]request
+info|2024-05-14 11:47:40.005593|[RPC][getGroupList]request
+info|2024-05-14 11:47:40.006234|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:40.006637|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:40.972628|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=eda1ebe4...,time=0
+info|2024-05-14 11:47:40.972758|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=30,toView=31,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:40.972957|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=30,cur_changeCycle=1,curView=30,view=31
+info|2024-05-14 11:47:41.540581|[RPC][getGroupList]request
+info|2024-05-14 11:47:41.542459|[RPC][getGroupList]request
+info|2024-05-14 11:47:41.972966|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=cc1807c7...
+info|2024-05-14 11:47:41.973802|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=31,toView=32,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:41.975659|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=31,cur_changeCycle=1,curView=31,view=32
+info|2024-05-14 11:47:42.976908|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=86ccecd2...,time=0
+info|2024-05-14 11:47:42.977053|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=32,toView=33,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:42.977584|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=32,cur_changeCycle=1,curView=32,view=33
+info|2024-05-14 11:47:43.977811|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=4ed20a0a...
+info|2024-05-14 11:47:43.979256|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=33,toView=34,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:43.981167|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=33,cur_changeCycle=1,curView=33,view=34
+info|2024-05-14 11:47:44.983839|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=81cd9548...,time=0
+info|2024-05-14 11:47:44.984219|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=34,toView=35,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:44.984771|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=34,cur_changeCycle=1,curView=34,view=35
+info|2024-05-14 11:47:45.013161|[RPC][getGroupList]request
+info|2024-05-14 11:47:45.014590|[RPC][getGroupList]request
+info|2024-05-14 11:47:45.016738|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:45.017540|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:45.340229|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:45.985102|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8c947404...
+info|2024-05-14 11:47:45.985694|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=35,toView=36,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:45.987430|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=35,cur_changeCycle=1,curView=35,view=36
+info|2024-05-14 11:47:46.549109|[RPC][getGroupList]request
+info|2024-05-14 11:47:46.554012|[RPC][getGroupList]request
+info|2024-05-14 11:47:46.990496|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=5db11700...,time=0
+info|2024-05-14 11:47:46.990899|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=36,toView=37,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:46.992804|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=36,cur_changeCycle=1,curView=36,view=37
+info|2024-05-14 11:47:47.993154|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=c9520075...
+info|2024-05-14 11:47:47.996740|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=37,toView=37,minView=38,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=38,view=37,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:47:47.997063|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=37,cur_changeCycle=1,curView=37,view=38
+info|2024-05-14 11:47:47.997086|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=38,toView=38,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:49.000693|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=49922072...,time=0
+info|2024-05-14 11:47:49.001086|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=38,toView=39,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:49.003055|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=38,cur_changeCycle=1,curView=38,view=39
+info|2024-05-14 11:47:50.004179|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=3216112b...
+info|2024-05-14 11:47:50.005023|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=39,toView=40,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:50.006699|[RPC][getGroupList]request
+info|2024-05-14 11:47:50.007252|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=39,cur_changeCycle=1,curView=39,view=40
+info|2024-05-14 11:47:50.008506|[RPC][getGroupList]request
+info|2024-05-14 11:47:50.011775|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:50.012779|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:51.009887|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=05838d35...,time=0
+info|2024-05-14 11:47:51.010573|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=40,toView=41,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:51.012579|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=40,cur_changeCycle=1,curView=40,view=41
+info|2024-05-14 11:47:51.559180|[RPC][getGroupList]request
+info|2024-05-14 11:47:51.563551|[RPC][getGroupList]request
+info|2024-05-14 11:47:52.013066|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8523ad84...
+info|2024-05-14 11:47:52.014590|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=41,toView=42,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:52.017157|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=41,cur_changeCycle=1,curView=41,view=42
+info|2024-05-14 11:47:53.019783|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=c1df0e6f...,time=0
+info|2024-05-14 11:47:53.020129|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=42,toView=43,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:53.021830|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=42,cur_changeCycle=1,curView=42,view=43
+info|2024-05-14 11:47:54.022504|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=e3c68ad1...
+info|2024-05-14 11:47:54.023941|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=43,toView=44,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:54.026269|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=43,cur_changeCycle=1,curView=43,view=44
+info|2024-05-14 11:47:55.001693|[RPC][getGroupList]request
+info|2024-05-14 11:47:55.003170|[RPC][getGroupList]request
+info|2024-05-14 11:47:55.004906|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:47:55.005622|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:47:55.027341|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=5dfced39...,time=0
+info|2024-05-14 11:47:55.027661|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=44,toView=45,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:55.029106|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=44,cur_changeCycle=1,curView=44,view=45
+info|2024-05-14 11:47:55.341356|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:47:56.028971|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=5e95aef2...
+info|2024-05-14 11:47:56.030427|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=45,toView=46,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:56.032377|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=45,cur_changeCycle=1,curView=45,view=46
+info|2024-05-14 11:47:56.565149|[RPC][getGroupList]request
+info|2024-05-14 11:47:56.569689|[RPC][getGroupList]request
+info|2024-05-14 11:47:57.035803|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=3358a88f...,time=0
+info|2024-05-14 11:47:57.036470|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=46,toView=47,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:57.037765|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=46,cur_changeCycle=1,curView=46,view=47
+info|2024-05-14 11:47:58.037641|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=81c17c95...
+info|2024-05-14 11:47:58.039054|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=47,toView=48,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:47:58.041495|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=47,cur_changeCycle=1,curView=47,view=48
+info|2024-05-14 11:47:59.044306|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=cb53cc2d...,time=0
+info|2024-05-14 11:47:59.044928|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=48,toView=49,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:47:59.045493|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=48,cur_changeCycle=1,curView=48,view=49
+info|2024-05-14 11:48:00.005785|[RPC][getGroupList]request
+info|2024-05-14 11:48:00.007254|[RPC][getGroupList]request
+info|2024-05-14 11:48:00.009054|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:00.009818|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:00.045977|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=f394c95f...
+info|2024-05-14 11:48:00.048447|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=49,toView=49,minView=50,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=50,view=49,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:00.048764|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=49,cur_changeCycle=1,curView=49,view=50
+info|2024-05-14 11:48:00.048784|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=50,toView=50,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:01.052963|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=dbf6a44d...,time=0
+info|2024-05-14 11:48:01.053299|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=50,toView=51,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:01.054549|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=50,cur_changeCycle=1,curView=50,view=51
+info|2024-05-14 11:48:01.574098|[RPC][getGroupList]request
+info|2024-05-14 11:48:01.578326|[RPC][getGroupList]request
+info|2024-05-14 11:48:02.055319|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=b8c8c642...
+info|2024-05-14 11:48:02.056742|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=51,toView=52,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:02.059182|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=51,cur_changeCycle=1,curView=51,view=52
+info|2024-05-14 11:48:03.061031|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=27b58ea9...,time=0
+info|2024-05-14 11:48:03.061707|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=52,toView=53,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:03.062284|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=52,cur_changeCycle=1,curView=52,view=53
+info|2024-05-14 11:48:04.062615|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=e4592b08...
+info|2024-05-14 11:48:04.063987|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=53,toView=54,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:04.065878|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=53,cur_changeCycle=1,curView=53,view=54
+info|2024-05-14 11:48:05.006534|[RPC][getGroupList]request
+info|2024-05-14 11:48:05.008168|[RPC][getGroupList]request
+info|2024-05-14 11:48:05.010798|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:05.011777|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:05.067066|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=e12805ec...,time=0
+info|2024-05-14 11:48:05.067407|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=54,toView=55,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:05.067923|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=54,cur_changeCycle=1,curView=54,view=55
+info|2024-05-14 11:48:05.342460|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:06.068306|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=b991df31...
+info|2024-05-14 11:48:06.071935|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=55,toView=56,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:06.072484|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=55,cur_changeCycle=1,curView=55,view=56
+info|2024-05-14 11:48:06.584142|[RPC][getGroupList]request
+info|2024-05-14 11:48:06.588577|[RPC][getGroupList]request
+info|2024-05-14 11:48:07.075648|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=6ec801ba...,time=0
+info|2024-05-14 11:48:07.076030|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=56,toView=57,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:07.077851|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=56,cur_changeCycle=1,curView=56,view=57
+info|2024-05-14 11:48:08.078396|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=716fcb4c...
+info|2024-05-14 11:48:08.079811|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=57,toView=58,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:08.082228|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=57,cur_changeCycle=1,curView=57,view=58
+info|2024-05-14 11:48:09.084454|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=ee8c0123...,time=0
+info|2024-05-14 11:48:09.084861|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=58,toView=59,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:09.086713|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=58,cur_changeCycle=1,curView=58,view=59
+info|2024-05-14 11:48:10.005190|[RPC][getGroupList]request
+info|2024-05-14 11:48:10.007223|[RPC][getGroupList]request
+info|2024-05-14 11:48:10.009636|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:10.010556|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:10.087432|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=9e0826d4...
+info|2024-05-14 11:48:10.090075|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=59,toView=59,minView=60,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=60,view=59,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:10.090387|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=59,cur_changeCycle=1,curView=59,view=60
+info|2024-05-14 11:48:10.090412|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=60,toView=60,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:11.092089|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=2db2d2a3...,time=0
+info|2024-05-14 11:48:11.092502|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=60,toView=61,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:11.094118|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=60,cur_changeCycle=1,curView=60,view=61
+info|2024-05-14 11:48:11.594573|[RPC][getGroupList]request
+info|2024-05-14 11:48:11.598905|[RPC][getGroupList]request
+info|2024-05-14 11:48:12.093819|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=deb420ea...
+info|2024-05-14 11:48:12.097467|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=61,toView=62,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:12.098005|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=61,cur_changeCycle=1,curView=61,view=62
+info|2024-05-14 11:48:13.100666|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=32098fde...,time=0
+info|2024-05-14 11:48:13.101080|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=62,toView=63,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:13.102894|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=62,cur_changeCycle=1,curView=62,view=63
+info|2024-05-14 11:48:14.103624|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=68ec3710...
+info|2024-05-14 11:48:14.107032|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=63,toView=63,minView=64,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=64,view=63,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:14.107359|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=63,cur_changeCycle=1,curView=63,view=64
+info|2024-05-14 11:48:14.107389|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=64,toView=64,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:15.004980|[RPC][getGroupList]request
+info|2024-05-14 11:48:15.006736|[RPC][getGroupList]request
+info|2024-05-14 11:48:15.009485|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:15.010738|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:15.109799|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=73c962b7...,time=0
+info|2024-05-14 11:48:15.110076|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=64,toView=65,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:15.111398|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=64,cur_changeCycle=1,curView=64,view=65
+info|2024-05-14 11:48:15.342876|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:16.112790|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=f396904a...
+info|2024-05-14 11:48:16.113923|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=65,toView=66,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:16.116259|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=65,cur_changeCycle=1,curView=65,view=66
+info|2024-05-14 11:48:16.600285|[RPC][getGroupList]request
+info|2024-05-14 11:48:16.602477|[RPC][getGroupList]request
+info|2024-05-14 11:48:17.117015|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=78b9ff8c...,time=0
+info|2024-05-14 11:48:17.117277|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=66,toView=67,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:17.117644|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=66,cur_changeCycle=1,curView=66,view=67
+info|2024-05-14 11:48:18.118423|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=a05a9385...
+info|2024-05-14 11:48:18.119811|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=67,toView=68,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:18.121576|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=67,cur_changeCycle=1,curView=67,view=68
+info|2024-05-14 11:48:19.122503|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=1370b2ee...,time=0
+info|2024-05-14 11:48:19.122790|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=68,toView=69,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:19.123179|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=68,cur_changeCycle=1,curView=68,view=69
+info|2024-05-14 11:48:19.902838|[RPC][getGroupList]request
+info|2024-05-14 11:48:20.007238|[RPC][getGroupList]request
+info|2024-05-14 11:48:20.007945|[RPC][getGroupList]request
+info|2024-05-14 11:48:20.009052|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:20.009484|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:20.122642|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=a7ad31c4...
+info|2024-05-14 11:48:20.123005|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=69,toView=70,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:20.123915|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=69,cur_changeCycle=1,curView=69,view=70
+info|2024-05-14 11:48:21.125426|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=9461fd93...,time=0
+info|2024-05-14 11:48:21.125674|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=70,toView=71,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:21.126043|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=70,cur_changeCycle=1,curView=70,view=71
+info|2024-05-14 11:48:21.604540|[RPC][getGroupList]request
+info|2024-05-14 11:48:21.608961|[RPC][getGroupList]request
+info|2024-05-14 11:48:22.126315|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=d16b3150...
+info|2024-05-14 11:48:22.127714|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=71,toView=72,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:22.130264|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=71,cur_changeCycle=1,curView=71,view=72
+info|2024-05-14 11:48:23.130692|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=3099935c...,time=0
+info|2024-05-14 11:48:23.130869|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=72,toView=73,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:23.131815|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=72,cur_changeCycle=1,curView=72,view=73
+info|2024-05-14 11:48:24.132065|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=a3f5b699...
+info|2024-05-14 11:48:24.132727|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=73,toView=74,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:24.134298|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=73,cur_changeCycle=1,curView=73,view=74
+info|2024-05-14 11:48:25.007318|[RPC][getGroupList]request
+info|2024-05-14 11:48:25.010637|[RPC][getGroupList]request
+info|2024-05-14 11:48:25.013033|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:25.014110|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:25.135949|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=b191651c...,time=0
+info|2024-05-14 11:48:25.136332|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=74,toView=75,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:25.138197|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=74,cur_changeCycle=1,curView=74,view=75
+info|2024-05-14 11:48:25.343613|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:26.138324|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=0d1bbfc9...
+info|2024-05-14 11:48:26.139206|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=75,toView=76,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:26.141208|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=75,cur_changeCycle=1,curView=75,view=76
+info|2024-05-14 11:48:26.610184|[RPC][getGroupList]request
+info|2024-05-14 11:48:26.614732|[RPC][getGroupList]request
+info|2024-05-14 11:48:27.142528|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=40bea51b...,time=0
+info|2024-05-14 11:48:27.142915|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=76,toView=77,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:27.143465|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=76,cur_changeCycle=1,curView=76,view=77
+info|2024-05-14 11:48:28.142675|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=d681a8c2...
+info|2024-05-14 11:48:28.143680|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=77,toView=77,minView=78,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=78,view=77,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:28.143792|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=77,cur_changeCycle=1,curView=77,view=78
+info|2024-05-14 11:48:28.143798|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=78,toView=78,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:29.144967|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=4213b7de...,time=0
+info|2024-05-14 11:48:29.145118|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=78,toView=79,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:29.145919|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=78,cur_changeCycle=1,curView=78,view=79
+info|2024-05-14 11:48:30.003120|[RPC][getGroupList]request
+info|2024-05-14 11:48:30.003681|[RPC][getGroupList]request
+info|2024-05-14 11:48:30.004452|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:30.004774|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:30.146900|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8b9a336c...
+info|2024-05-14 11:48:30.147712|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=79,toView=80,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:30.149535|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=79,cur_changeCycle=1,curView=79,view=80
+info|2024-05-14 11:48:31.149709|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=03d7eaed...,time=0
+info|2024-05-14 11:48:31.149906|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=80,toView=81,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:31.150770|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=80,cur_changeCycle=1,curView=80,view=81
+info|2024-05-14 11:48:31.616045|[RPC][getGroupList]request
+info|2024-05-14 11:48:31.618591|[RPC][getGroupList]request
+info|2024-05-14 11:48:32.151502|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=24e9c49d...
+info|2024-05-14 11:48:32.153222|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=81,toView=81,minView=82,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=82,view=81,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:32.153433|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=81,cur_changeCycle=1,curView=81,view=82
+info|2024-05-14 11:48:32.153446|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=82,toView=82,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:33.154951|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=4c786ca9...,time=0
+info|2024-05-14 11:48:33.155216|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=82,toView=83,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:33.155576|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=82,cur_changeCycle=1,curView=82,view=83
+info|2024-05-14 11:48:34.155090|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=0444edaf...
+info|2024-05-14 11:48:34.155684|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=83,toView=84,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:34.157181|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=83,cur_changeCycle=1,curView=83,view=84
+info|2024-05-14 11:48:35.009858|[RPC][getGroupList]request
+info|2024-05-14 11:48:35.010995|[RPC][getGroupList]request
+info|2024-05-14 11:48:35.012299|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:35.012823|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:35.158955|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=3d7d017b...,time=0
+info|2024-05-14 11:48:35.159320|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=84,toView=85,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:35.159868|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=84,cur_changeCycle=1,curView=84,view=85
+info|2024-05-14 11:48:35.344709|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:36.160881|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=18d479f3...
+info|2024-05-14 11:48:36.162296|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=85,toView=86,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:36.164487|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=85,cur_changeCycle=1,curView=85,view=86
+info|2024-05-14 11:48:36.622392|[RPC][getGroupList]request
+info|2024-05-14 11:48:36.627145|[RPC][getGroupList]request
+info|2024-05-14 11:48:37.166457|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=f4fc2ab9...,time=0
+info|2024-05-14 11:48:37.166775|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=86,toView=87,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:37.168772|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=86,cur_changeCycle=1,curView=86,view=87
+info|2024-05-14 11:48:38.169437|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=f18e3988...
+info|2024-05-14 11:48:38.170873|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=87,toView=88,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:38.172672|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=87,cur_changeCycle=1,curView=87,view=88
+info|2024-05-14 11:48:39.174920|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=b069d789...,time=0
+info|2024-05-14 11:48:39.175249|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=88,toView=89,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:39.175689|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=88,cur_changeCycle=1,curView=88,view=89
+info|2024-05-14 11:48:40.004545|[RPC][getGroupList]request
+info|2024-05-14 11:48:40.006338|[RPC][getGroupList]request
+info|2024-05-14 11:48:40.008333|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:40.009224|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:40.176105|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8a620cb6...
+info|2024-05-14 11:48:40.179553|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=89,toView=90,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:40.180094|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=89,cur_changeCycle=1,curView=89,view=90
+info|2024-05-14 11:48:41.182983|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=1c011df7...,time=0
+info|2024-05-14 11:48:41.183477|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=90,toView=91,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:41.184318|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=90,cur_changeCycle=1,curView=90,view=91
+info|2024-05-14 11:48:41.631921|[RPC][getGroupList]request
+info|2024-05-14 11:48:41.636488|[RPC][getGroupList]request
+info|2024-05-14 11:48:42.184980|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=91e1f39f...
+info|2024-05-14 11:48:42.188313|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=91,toView=91,minView=92,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=92,view=91,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:42.188560|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=91,cur_changeCycle=1,curView=91,view=92
+info|2024-05-14 11:48:42.188579|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=92,toView=92,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:43.192455|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=cf89d2f7...,time=0
+info|2024-05-14 11:48:43.193118|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=92,toView=93,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:43.193694|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=92,cur_changeCycle=1,curView=92,view=93
+info|2024-05-14 11:48:44.193998|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=d2689065...
+info|2024-05-14 11:48:44.195397|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=93,toView=94,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:44.197346|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=93,cur_changeCycle=1,curView=93,view=94
+info|2024-05-14 11:48:45.009438|[RPC][getGroupList]request
+info|2024-05-14 11:48:45.010834|[RPC][getGroupList]request
+info|2024-05-14 11:48:45.012924|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:45.013747|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:45.199406|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=9bccf990...,time=0
+info|2024-05-14 11:48:45.199794|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=94,toView=95,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:45.200345|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=94,cur_changeCycle=1,curView=94,view=95
+info|2024-05-14 11:48:45.345813|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:46.201015|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=995b6b86...
+info|2024-05-14 11:48:46.204578|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=95,toView=95,minView=96,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=96,view=95,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:46.204902|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=95,cur_changeCycle=1,curView=95,view=96
+info|2024-05-14 11:48:46.204926|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=96,toView=96,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:46.641080|[RPC][getGroupList]request
+info|2024-05-14 11:48:46.645881|[RPC][getGroupList]request
+info|2024-05-14 11:48:47.206707|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=5b0dcff2...,time=0
+info|2024-05-14 11:48:47.206889|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=96,toView=97,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:47.207807|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=96,cur_changeCycle=1,curView=96,view=97
+info|2024-05-14 11:48:48.208880|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=2e4bc899...
+info|2024-05-14 11:48:48.210599|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=97,toView=97,minView=98,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=98,view=97,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:48.210807|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=97,cur_changeCycle=1,curView=97,view=98
+info|2024-05-14 11:48:48.210820|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=98,toView=98,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:49.212043|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=c5e9250f...,time=0
+info|2024-05-14 11:48:49.212292|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=98,toView=99,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:49.213159|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=98,cur_changeCycle=1,curView=98,view=99
+info|2024-05-14 11:48:50.005524|[RPC][getGroupList]request
+info|2024-05-14 11:48:50.006600|[RPC][getGroupList]request
+info|2024-05-14 11:48:50.008127|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:50.008870|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:50.213704|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=1b41e958...
+info|2024-05-14 11:48:50.214713|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=99,toView=99,minView=100,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=100,view=99,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:50.214830|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=99,cur_changeCycle=1,curView=99,view=100
+info|2024-05-14 11:48:50.214837|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=100,toView=100,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:51.215832|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=bef28461...,time=0
+info|2024-05-14 11:48:51.215985|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=100,toView=101,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:51.216197|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=100,cur_changeCycle=1,curView=100,view=101
+info|2024-05-14 11:48:51.645995|[RPC][getGroupList]request
+info|2024-05-14 11:48:51.648882|[RPC][getGroupList]request
+info|2024-05-14 11:48:52.217181|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=6eaa8771...
+info|2024-05-14 11:48:52.217681|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=101,toView=102,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:52.219091|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=101,cur_changeCycle=1,curView=101,view=102
+info|2024-05-14 11:48:53.219563|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=ada24b74...,time=0
+info|2024-05-14 11:48:53.219679|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=102,toView=103,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:53.219826|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=102,cur_changeCycle=1,curView=102,view=103
+info|2024-05-14 11:48:54.220280|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=6ac82141...
+info|2024-05-14 11:48:54.222340|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=103,toView=103,minView=104,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=104,view=103,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:48:54.222559|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=103,cur_changeCycle=1,curView=103,view=104
+info|2024-05-14 11:48:54.222573|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=104,toView=104,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:55.006215|[RPC][getGroupList]request
+info|2024-05-14 11:48:55.007100|[RPC][getGroupList]request
+info|2024-05-14 11:48:55.008587|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:48:55.009136|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:48:55.226378|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=d3187608...,time=0
+info|2024-05-14 11:48:55.226773|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=104,toView=105,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:55.228680|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=104,cur_changeCycle=1,curView=104,view=105
+info|2024-05-14 11:48:55.345988|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:48:56.228242|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=f0f252cb...
+info|2024-05-14 11:48:56.231741|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=105,toView=106,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:56.232290|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=105,cur_changeCycle=1,curView=105,view=106
+info|2024-05-14 11:48:56.654627|[RPC][getGroupList]request
+info|2024-05-14 11:48:56.660080|[RPC][getGroupList]request
+info|2024-05-14 11:48:57.234758|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=bcb50230...,time=0
+info|2024-05-14 11:48:57.235442|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=106,toView=107,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:48:57.237323|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=106,cur_changeCycle=1,curView=106,view=107
+info|2024-05-14 11:48:58.237493|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=2e1fd6d2...
+info|2024-05-14 11:48:58.238337|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=107,toView=108,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:58.240252|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=107,cur_changeCycle=1,curView=107,view=108
+info|2024-05-14 11:48:59.241595|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=bca6fc72...,time=0
+info|2024-05-14 11:48:59.241864|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=108,toView=109,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:48:59.243055|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=108,cur_changeCycle=1,curView=108,view=109
+info|2024-05-14 11:49:00.006336|[RPC][getGroupList]request
+info|2024-05-14 11:49:00.007830|[RPC][getGroupList]request
+info|2024-05-14 11:49:00.009565|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:49:00.010279|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:49:00.243862|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8028da43...
+info|2024-05-14 11:49:00.245707|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=109,toView=109,minView=110,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=110,view=109,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:49:00.245903|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=109,cur_changeCycle=1,curView=109,view=110
+info|2024-05-14 11:49:00.245922|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=110,toView=110,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:01.249188|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=283a1561...,time=0
+info|2024-05-14 11:49:01.249561|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=110,toView=111,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:01.250127|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=110,cur_changeCycle=1,curView=110,view=111
+info|2024-05-14 11:49:01.664538|[RPC][getGroupList]request
+info|2024-05-14 11:49:01.668414|[RPC][getGroupList]request
+info|2024-05-14 11:49:02.251323|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=2c1e7e0f...
+info|2024-05-14 11:49:02.252760|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=111,toView=112,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:02.255210|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=111,cur_changeCycle=1,curView=111,view=112
+info|2024-05-14 11:49:03.257809|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=c69519bd...,time=0
+info|2024-05-14 11:49:03.258192|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=112,toView=113,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:49:03.258777|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=112,cur_changeCycle=1,curView=112,view=113
+info|2024-05-14 11:49:04.258876|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=f00bd51e...
+info|2024-05-14 11:49:04.259606|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=113,toView=114,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:04.261161|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=113,cur_changeCycle=1,curView=113,view=114
+info|2024-05-14 11:49:05.007747|[RPC][getGroupList]request
+info|2024-05-14 11:49:05.008381|[RPC][getGroupList]request
+info|2024-05-14 11:49:05.009542|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:49:05.009849|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:49:05.261708|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=7102df74...,time=0
+info|2024-05-14 11:49:05.261808|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=114,toView=115,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:05.261959|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=114,cur_changeCycle=1,curView=114,view=115
+info|2024-05-14 11:49:05.347031|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:49:06.261919|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=8c8ae3a7...
+info|2024-05-14 11:49:06.262619|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=115,toView=115,minView=116,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=116,view=115,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:49:06.262710|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=115,cur_changeCycle=1,curView=115,view=116
+info|2024-05-14 11:49:06.262721|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=116,toView=116,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:06.668744|[RPC][getGroupList]request
+info|2024-05-14 11:49:06.670411|[RPC][getGroupList]request
+info|2024-05-14 11:49:07.263637|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=e7d320ca...,time=0
+info|2024-05-14 11:49:07.263729|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=116,toView=117,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:07.264195|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=116,cur_changeCycle=1,curView=116,view=117
+info|2024-05-14 11:49:08.264971|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=678bf0e1...
+info|2024-05-14 11:49:08.265172|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=117,toView=118,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:08.265727|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=117,cur_changeCycle=1,curView=117,view=118
+info|2024-05-14 11:49:09.266461|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=d24ad36e...,time=0
+info|2024-05-14 11:49:09.266561|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=118,toView=119,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:09.267163|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=118,cur_changeCycle=1,curView=118,view=119
+info|2024-05-14 11:49:10.006605|[RPC][getGroupList]request
+info|2024-05-14 11:49:10.006912|[RPC][getGroupList]request
+info|2024-05-14 11:49:10.007381|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:49:10.007636|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:49:10.267236|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=4c1ec791...
+info|2024-05-14 11:49:10.267445|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=119,toView=120,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:10.267934|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=119,cur_changeCycle=1,curView=119,view=120
+info|2024-05-14 11:49:11.267709|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=0f660234...,time=0
+info|2024-05-14 11:49:11.267806|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=120,toView=121,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:11.267951|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=120,cur_changeCycle=1,curView=120,view=121
+info|2024-05-14 11:49:11.675362|[RPC][getGroupList]request
+info|2024-05-14 11:49:11.677052|[RPC][getGroupList]request
+info|2024-05-14 11:49:12.267650|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=c1dc6986...
+info|2024-05-14 11:49:12.267861|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=121,toView=122,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:12.268423|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=121,cur_changeCycle=1,curView=121,view=122
+info|2024-05-14 11:49:13.268963|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=aa355782...,time=0
+info|2024-05-14 11:49:13.269070|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=122,toView=123,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=1
+info|2024-05-14 11:49:13.269443|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=122,cur_changeCycle=1,curView=122,view=123
+info|2024-05-14 11:49:14.269402|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=e40abf2d...
+info|2024-05-14 11:49:14.269632|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=123,toView=124,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:14.270170|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=123,cur_changeCycle=1,curView=123,view=124
+info|2024-05-14 11:49:15.002953|[RPC][getGroupList]request
+info|2024-05-14 11:49:15.003326|[RPC][getGroupList]request
+info|2024-05-14 11:49:15.003950|[RPC][getPbftView]request,groupID=1
+info|2024-05-14 11:49:15.004198|[RPC][getPendingTxSize]request,groupID=1
+info|2024-05-14 11:49:15.270568|[g:1][CONSENSUS]addRawPrepare,height=18,reqIdx=1,hash=0f439b87...,time=0
+info|2024-05-14 11:49:15.270668|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=124,toView=125,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:15.271153|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=124,cur_changeCycle=1,curView=124,view=125
+info|2024-05-14 11:49:15.347128|[P2P][Service] heartBeat,connected count=1
+info|2024-05-14 11:49:16.272038|[g:1][CONSENSUS][SEALER]++++++++++++++++ Generating seal on,blkNum=18,tx=0,nodeIdx=0,hash=d8024df9...
+info|2024-05-14 11:49:16.272805|[g:1][CONSENSUS][PBFT]Trigger fast-viewchange,view=125,toView=125,minView=126,INFO=,reqNum=17,curNum=17,GenIdx=1,Cview=126,view=125,fromIdx=1,fromNode=f110ccf0...,fromIp=127.0.0.1:58723,hash=66947ac5...,nodeIdx=0,myNode=cea6ac09...
+info|2024-05-14 11:49:16.272893|[g:1][CONSENSUS][PBFT]checkAndChangeView: Reach consensus,org_view=125,cur_changeCycle=1,curView=125,view=126
+info|2024-05-14 11:49:16.272899|[g:1][CONSENSUS][PBFT]checkTimeout Succ,view=126,toView=126,nodeIdx=0,changeCycle=1,myNode=cea6ac09...,timecost=0
+info|2024-05-14 11:49:16.678805|[RPC][getGroupList]request
+info|2024-05-14 11:49:16.679832|[RPC][getGroupList]request
