@@ -1,10 +1,10 @@
 server:
-  port: 8080
+  port: 9002
   session:
     timeout: 60
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/logistics?serverTimezone=GMT%2B8
+    url: jdbc:mysql://42.49.60.21:9001/logistics?serverTimezone=GMT%2B8
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,11 +20,11 @@ system:
   hexPrivateKey: "1753f860fb224bc54ba38b6544d9d97d75062ec25083863368fab8a916714d85"
   groupId: 1
   contract:
-    logisticsControllerAddress: "0x0930e0b333ad6f8847e6e8a7b71d3c6e85dbe23d"
+    logisticsControllerAddress: "0xd03c229698b138e893f869c572ba70d3047f8771"
 cryptoMaterial:
   certPath: conf
 network:
   peers:
-    - 192.168.1.102:20200
-    - 192.168.1.102:20201
+    - 127.0.0.1:20200
+    - 127.0.0.1:20201
 
