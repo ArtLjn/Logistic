@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.aop;
+package org.example.back.demos.model.response;
 
 /**
  * @author ljn
@@ -15,21 +15,21 @@ public class GlobalResponse {
         this.code = code;
     }
 
-    public String getMessage() {
-        return message;
+    public String getInfo() {
+        return info;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     private int code;
-    private String message;
+    private String info;
     // 可能还有其他字段，例如数据或错误详情
 
     public GlobalResponse(int code, String message) {
         this.code = code;
-        this.message = message;
+        this.info = message;
     }
 
 }

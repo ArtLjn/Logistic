@@ -9,6 +9,7 @@ import org.example.back.demos.model.bo.LogisticsControllerGetPerChaseCompanyInpu
 import org.example.back.demos.model.bo.LogisticsControllerGetPerChaseOrderInputBO;
 import org.example.back.demos.model.entity.OrderEntity;
 import org.example.back.demos.model.entity.UserEntity;
+import org.fisco.bcos.sdk.transaction.model.dto.CallResponse;
 import org.fisco.bcos.sdk.transaction.model.dto.TransactionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,11 +45,13 @@ public class PerChaseService {
     public Object getPerChaseData(String orderId) throws Exception {
         LogisticsControllerGetPerChaseOrderInputBO logisticsControllerGetPerChaseOrderInputBO = new LogisticsControllerGetPerChaseOrderInputBO();
         logisticsControllerGetPerChaseOrderInputBO.setIndex(orderId);
-        return JSON.parseArray(logisticsControllerService.GetPerChaseOrder(logisticsControllerGetPerChaseOrderInputBO).getReturnObject().get(0).toString()).get(0);
+        List<Object> response = logisticsControllerService.GetPerChaseOrder(logisticsControllerGetPerChaseOrderInputBO).getReturnObject();
+        return JSON.parseArray(response.toString()).get(0);
     }
 
     // 获取所有采购订单数据
     public List<Object> getOwnerAllPerChaseOrderData(UserEntity userEntity) throws Exception {
+        if (Objects.isNull(userEntity)) return null;
         List<OrderEntity> perChaseOrderEntities = orderService.getOrderList(userEntity, Role.PerChaseCompany);
         if (perChaseOrderEntities.isEmpty()) return null;
         // 创建一个列表用于存储结果

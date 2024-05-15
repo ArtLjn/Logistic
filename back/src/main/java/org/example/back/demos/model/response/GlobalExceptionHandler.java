@@ -1,4 +1,4 @@
-package org.example.back.demos.controller.aop;
+package org.example.back.demos.model.response;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,4 +19,5 @@ public class GlobalExceptionHandler {
         GlobalResponse response = new GlobalResponse(401, ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
     }
+
 }

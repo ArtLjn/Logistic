@@ -45,6 +45,7 @@ public class TransService {
 
     // 获取所有采购订单数据
     public List<Object> getOwnerAllTransOrderData(UserEntity userEntity) throws Exception {
+        if (Objects.isNull(userEntity)) return null;
         List<OrderEntity> transOrderEntities = orderService.getOrderList(userEntity, Role.TransCompany);
         if (transOrderEntities.isEmpty()) return null;
         // 创建一个列表用于存储结果
