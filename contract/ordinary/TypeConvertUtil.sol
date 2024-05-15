@@ -12,7 +12,7 @@ library TypeConvertUtil {
     * @param source      字符串
     *
     * @return            bytes32值
-    */https://gitee.com/morning-ljn/maritime-logistics
+    */
     function stringToBytes32(string memory source) internal pure returns (bytes32 result) {
 
         bytes memory tempEmptyStringTest = bytes(source);

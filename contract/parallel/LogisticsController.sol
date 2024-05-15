@@ -11,6 +11,7 @@ contract LogisticsController is TableTools,Ownable,ParallelContract {
     CompanyStorage companyStorage;
     OrderStorage orderStorage;
     string[] funcTable;
+    event parallelEvent(int);
     constructor(address company,address order){
         companyStorage = CompanyStorage(company);
         orderStorage = OrderStorage(order);
@@ -71,14 +72,16 @@ contract LogisticsController is TableTools,Ownable,ParallelContract {
     // 注册并行方法
     function enableParallel() {
         for (uint k = 0; k < funcTable.length; k ++ ) {
-            registerParallelFunction(funcTable[k],1);
+           int code = registerParallelFunction(funcTable[k],1);
+            emit parallelEvent(code);
         }
     }
 
     //注销并行合约方法
     function disableParallel() {
         for (uint v = 0; v < funcTable.length; v ++ ) {
-            unregisterParallelFunction(funcTable[v]);
+            int code = unregisterParallelFunction(funcTable[v]);
+            emit parallelEvent(code);
         }
     }
 }

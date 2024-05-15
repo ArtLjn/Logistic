@@ -11,13 +11,13 @@ contract ParallelContract
     ParallelConfigPrecompiled precompiled = ParallelConfigPrecompiled(0x1006);
     
     function registerParallelFunction(string functionName, uint256 criticalSize) public 
-    {
-        precompiled.registerParallelFunctionInternal(address(this), functionName, criticalSize);
+    returns(int) {
+       return precompiled.registerParallelFunctionInternal(address(this), functionName, criticalSize);
     }
     
-    function unregisterParallelFunction(string functionName) public
+    function unregisterParallelFunction(string functionName) public returns(int)
     {
-        precompiled.unregisterParallelFunctionInternal(address(this), functionName);
+       return precompiled.unregisterParallelFunctionInternal(address(this), functionName);
     }
     
     function enableParallel() public;
