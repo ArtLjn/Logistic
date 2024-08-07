@@ -1,0 +1,3 @@
+*.java linguist-language=java
+*.sol linguist-language=solidity
+*.vue linguist-language=vue
